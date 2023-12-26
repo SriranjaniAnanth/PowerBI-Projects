@@ -1,0 +1,9 @@
+{
+  "version": "1.0",
+  "datasetReference": {
+    "byPath": {
+      "path": "../US_CrimeDataReport.Dataset"
+    },
+    "byConnection": null
+  }
+}

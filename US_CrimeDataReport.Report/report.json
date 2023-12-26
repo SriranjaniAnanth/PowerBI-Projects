@@ -1,0 +1,159 @@
+{
+  "config": "{\"version\":\"5.44\",\"themeCollection\":{\"baseTheme\":{\"name\":\"CY23SU04\",\"version\":\"5.46\",\"type\":2}},\"activeSectionIndex\":1,\"defaultDrillFilterOtherVisuals\":true,\"linguisticSchemaSyncVersion\":2,\"settings\":{\"useNewFilterPaneExperience\":true,\"allowChangeFilterTypes\":true,\"useStylableVisualContainerHeader\":true,\"queryLimitOption\":6,\"useEnhancedTooltips\":true,\"exportDataMode\":1,\"useDefaultAggregateDisplayName\":true},\"objects\":{\"section\":[{\"properties\":{\"verticalAlignment\":{\"expr\":{\"Literal\":{\"Value\":\"'Top'\"}}}}}]}}",
+  "layoutOptimization": 0,
+  "resourcePackages": [
+    {
+      "resourcePackage": {
+        "disabled": false,
+        "items": [
+          {
+            "name": "CY23SU04",
+            "path": "BaseThemes/CY23SU04.json",
+            "type": 202
+          }
+        ],
+        "name": "SharedResources",
+        "type": 2
+      }
+    }
+  ],
+  "sections": [
+    {
+      "config": "{}",
+      "displayName": "Dashboard",
+      "displayOption": 1,
+      "filters": "[]",
+      "height": 720.00,
+      "name": "ReportSection",
+      "visualContainers": [
+        {
+          "config": "{\"name\":\"0fda7e066285cfebf11a\",\"layouts\":[{\"id\":0,\"position\":{\"x\":0,\"y\":0,\"z\":3000,\"width\":1280,\"height\":81.42857142857143,\"tabOrder\":3000}}],\"singleVisual\":{\"visualType\":\"textbox\",\"drillFilterOtherVisuals\":true,\"objects\":{\"general\":[{\"properties\":{\"paragraphs\":[{\"textRuns\":[{\"value\":\"US Crime Data Analysis\",\"textStyle\":{\"fontWeight\":\"bold\",\"fontSize\":\"28pt\",\"color\":\"#ffffff\"}}],\"horizontalTextAlignment\":\"center\"}]}}]},\"vcObjects\":{\"background\":[{\"properties\":{\"color\":{\"solid\":{\"color\":{\"expr\":{\"ThemeDataColor\":{\"ColorId\":9,\"Percent\":0}}}}}}}],\"border\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}},\"radius\":{\"expr\":{\"Literal\":{\"Value\":\"30D\"}}}}}]}}}",
+          "filters": "[]",
+          "height": 81.43,
+          "width": 1280.00,
+          "x": 0.00,
+          "y": 0.00,
+          "z": 3000.00
+        },
+        {
+          "config": "{\"name\":\"1cc71f3a01b710413be2\",\"layouts\":[{\"id\":0,\"position\":{\"x\":545.7142857142858,\"y\":81.42857142857143,\"z\":4000,\"width\":372.8571428571429,\"height\":181.42857142857144,\"tabOrder\":4000}}],\"singleVisual\":{\"visualType\":\"textbox\",\"drillFilterOtherVisuals\":true,\"objects\":{\"general\":[{\"properties\":{\"paragraphs\":[{\"textRuns\":[{\"value\":\"INSIGHTS\",\"textStyle\":{\"fontSize\":\"14pt\",\"color\":\"#d64550\"}}],\"horizontalTextAlignment\":\"center\"},{\"textRuns\":[{\"value\":\"The crime rates have touched the peak in the year 1991 and have gone down drastically over the years\",\"textStyle\":{\"fontSize\":\"12pt\",\"color\":\"#808080\"}}]},{\"textRuns\":[{\"value\":\"\"}]},{\"textRuns\":[{\"value\":\"We even find that the maximum crime cases are observed in the city of New York\",\"textStyle\":{\"fontSize\":\"12pt\",\"color\":\"#808080\"}}]}]}}]},\"vcObjects\":{\"title\":[{\"properties\":{\"text\":{\"expr\":{\"Literal\":{\"Value\":\"'INSIGHTS'\"}}},\"titleWrap\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}},\"fontColor\":{\"solid\":{\"color\":{\"expr\":{\"ThemeDataColor\":{\"ColorId\":0,\"Percent\":0}}}}},\"background\":{\"solid\":{\"color\":{\"expr\":{\"ThemeDataColor\":{\"ColorId\":9,\"Percent\":0}}}}},\"alignment\":{\"expr\":{\"Literal\":{\"Value\":\"'center'\"}}}}}],\"background\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}},\"transparency\":{\"expr\":{\"Literal\":{\"Value\":\"0D\"}}}}}],\"border\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}},\"radius\":{\"expr\":{\"Literal\":{\"Value\":\"30D\"}}}}}]}}}",
+          "filters": "[]",
+          "height": 181.43,
+          "width": 372.86,
+          "x": 545.71,
+          "y": 81.43,
+          "z": 4000.00
+        },
+        {
+          "config": "{\"name\":\"37b1c177e7f5482c9722\",\"layouts\":[{\"id\":0,\"position\":{\"x\":0,\"y\":81.42857142857143,\"z\":6002,\"width\":545.7142857142858,\"height\":181.42857142857144,\"tabOrder\":6002}}],\"singleVisual\":{\"visualType\":\"multiRowCard\",\"projections\":{\"Values\":[{\"queryRef\":\"us crime dataset.agency_jurisdiction\"},{\"queryRef\":\"Sum(us crime dataset.population)\"},{\"queryRef\":\"Sum(us crime dataset.Total Crimes Reported)\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"u\",\"Entity\":\"us crime dataset\",\"Type\":0}],\"Select\":[{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"u\"}},\"Property\":\"population\"}},\"Function\":0},\"Name\":\"Sum(us crime dataset.population)\",\"NativeReferenceName\":\"Total Population  in the Aera\"},{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"u\"}},\"Property\":\"Total Crimes Reported\"}},\"Function\":0},\"Name\":\"Sum(us crime dataset.Total Crimes Reported)\",\"NativeReferenceName\":\"Total Crimes Reported in the Aera\"},{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"u\"}},\"Property\":\"agency_jurisdiction\"},\"Name\":\"us crime dataset.agency_jurisdiction\",\"NativeReferenceName\":\"Aera with Max Crimes\"}],\"OrderBy\":[{\"Direction\":1,\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"u\"}},\"Property\":\"agency_jurisdiction\"}}}]},\"columnProperties\":{\"Sum(us crime dataset.population)\":{\"displayName\":\"Total Population  in the Aera\"},\"Sum(us crime dataset.Total Crimes Reported)\":{\"displayName\":\"Total Crimes Reported in the Aera\"},\"us crime dataset.agency_jurisdiction\":{\"displayName\":\"Aera with Max Crimes\"}},\"drillFilterOtherVisuals\":true,\"hasDefaultSort\":true,\"objects\":{\"dataLabels\":[{\"properties\":{\"fontSize\":{\"expr\":{\"Literal\":{\"Value\":\"24D\"}}}}}],\"cardTitle\":[{\"properties\":{\"color\":{\"solid\":{\"color\":{\"expr\":{\"ThemeDataColor\":{\"ColorId\":9,\"Percent\":0}}}}},\"fontSize\":{\"expr\":{\"Literal\":{\"Value\":\"27D\"}}}}}],\"categoryLabels\":[{\"properties\":{\"fontSize\":{\"expr\":{\"Literal\":{\"Value\":\"12D\"}}}}}]},\"vcObjects\":{\"title\":[{\"properties\":{\"titleWrap\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}},\"fontColor\":{\"solid\":{\"color\":{\"expr\":{\"ThemeDataColor\":{\"ColorId\":0,\"Percent\":0}}}}},\"background\":{\"solid\":{\"color\":{\"expr\":{\"ThemeDataColor\":{\"ColorId\":9,\"Percent\":0}}}}},\"alignment\":{\"expr\":{\"Literal\":{\"Value\":\"'center'\"}}}}}],\"background\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}},\"transparency\":{\"expr\":{\"Literal\":{\"Value\":\"0D\"}}}}}],\"border\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}},\"radius\":{\"expr\":{\"Literal\":{\"Value\":\"30D\"}}}}}]}}}",
+          "filters": "[{\"name\":\"Filter51beb381a162a8574eb7\",\"expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Entity\":\"us crime dataset\"}},\"Property\":\"agency_jurisdiction\"}},\"filter\":{\"Version\":2,\"From\":[{\"Name\":\"subquery\",\"Expression\":{\"Subquery\":{\"Query\":{\"Version\":2,\"From\":[{\"Name\":\"u\",\"Entity\":\"us crime dataset\",\"Type\":0}],\"Select\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"u\"}},\"Property\":\"agency_jurisdiction\"},\"Name\":\"field\"}],\"OrderBy\":[{\"Direction\":2,\"Expression\":{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"u\"}},\"Property\":\"Total Crimes Reported\"}},\"Function\":4}}}],\"Top\":1}}},\"Type\":2},{\"Name\":\"u\",\"Entity\":\"us crime dataset\",\"Type\":0}],\"Where\":[{\"Condition\":{\"In\":{\"Expressions\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"u\"}},\"Property\":\"agency_jurisdiction\"}}],\"Table\":{\"SourceRef\":{\"Source\":\"subquery\"}}}}}]},\"type\":\"TopN\",\"howCreated\":0}]",
+          "height": 181.43,
+          "width": 545.71,
+          "x": 0.00,
+          "y": 81.43,
+          "z": 6002.00
+        },
+        {
+          "config": "{\"name\":\"5766f9bfcf8693e9f662\",\"layouts\":[{\"id\":0,\"position\":{\"x\":0,\"y\":262.8571428571429,\"z\":2000,\"width\":545.7142857142858,\"height\":457.14285714285717,\"tabOrder\":2000}}],\"singleVisual\":{\"visualType\":\"map\",\"projections\":{\"Category\":[{\"queryRef\":\"us crime dataset.agency_jurisdiction\",\"active\":true}],\"Size\":[{\"queryRef\":\"Sum(us crime dataset.Total Crimes Reported)\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"u\",\"Entity\":\"us crime dataset\",\"Type\":0}],\"Select\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"u\"}},\"Property\":\"agency_jurisdiction\"},\"Name\":\"us crime dataset.agency_jurisdiction\",\"NativeReferenceName\":\"agency_jurisdiction\"},{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"u\"}},\"Property\":\"Total Crimes Reported\"}},\"Function\":0},\"Name\":\"Sum(us crime dataset.Total Crimes Reported)\",\"NativeReferenceName\":\"Sum of Total Crimes Reported\"}]},\"drillFilterOtherVisuals\":true,\"objects\":{\"legend\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}}}}],\"dataPoint\":[{\"properties\":{\"fill\":{\"solid\":{\"color\":{\"expr\":{\"ThemeDataColor\":{\"ColorId\":0,\"Percent\":-0.6}}}}}}},{\"properties\":{\"fill\":{\"solid\":{\"color\":{\"expr\":{\"ThemeDataColor\":{\"ColorId\":1,\"Percent\":0.1}}}}}},\"selector\":{\"metadata\":\"Sum(us crime dataset.Total Crimes Reported)\"}},{\"properties\":{\"fill\":{\"solid\":{\"color\":{\"expr\":{\"ThemeDataColor\":{\"ColorId\":0,\"Percent\":-0.3}}}}}},\"selector\":{\"metadata\":\"Sum(us crime dataset.population)\"}}],\"mapStyles\":[{\"properties\":{\"mapTheme\":{\"expr\":{\"Literal\":{\"Value\":\"'canvasLight'\"}}}}}]},\"vcObjects\":{\"title\":[{\"properties\":{\"titleWrap\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}},\"fontColor\":{\"solid\":{\"color\":{\"expr\":{\"ThemeDataColor\":{\"ColorId\":0,\"Percent\":0}}}}},\"background\":{\"solid\":{\"color\":{\"expr\":{\"ThemeDataColor\":{\"ColorId\":9,\"Percent\":0}}}}},\"alignment\":{\"expr\":{\"Literal\":{\"Value\":\"'center'\"}}},\"text\":{\"expr\":{\"Literal\":{\"Value\":\"' Total Crimes Reported State Wise'\"}}}}}],\"background\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}},\"transparency\":{\"expr\":{\"Literal\":{\"Value\":\"0D\"}}}}}],\"border\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}},\"radius\":{\"expr\":{\"Literal\":{\"Value\":\"30D\"}}}}}]}}}",
+          "filters": "[]",
+          "height": 457.14,
+          "width": 545.71,
+          "x": 0.00,
+          "y": 262.86,
+          "z": 2000.00
+        },
+        {
+          "config": "{\"name\":\"5f707e5443d33a768404\",\"layouts\":[{\"id\":0,\"position\":{\"x\":545.7142857142858,\"y\":262.8571428571429,\"z\":1000,\"width\":372.8571428571429,\"height\":457.14285714285717,\"tabOrder\":1000}}],\"singleVisual\":{\"visualType\":\"lineChart\",\"projections\":{\"Category\":[{\"queryRef\":\"us crime dataset.report_year.Variation.Date Hierarchy.Year\",\"active\":true}],\"Y2\":[{\"queryRef\":\"Sum(us crime dataset.Total Crimes Reported)\"}],\"Y\":[{\"queryRef\":\"Sum(us crime dataset.population)\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"u\",\"Entity\":\"us crime dataset\",\"Type\":0}],\"Select\":[{\"HierarchyLevel\":{\"Expression\":{\"Hierarchy\":{\"Expression\":{\"PropertyVariationSource\":{\"Expression\":{\"SourceRef\":{\"Source\":\"u\"}},\"Name\":\"Variation\",\"Property\":\"report_year\"}},\"Hierarchy\":\"Date Hierarchy\"}},\"Level\":\"Year\"},\"Name\":\"us crime dataset.report_year.Variation.Date Hierarchy.Year\",\"NativeReferenceName\":\"report_year Year\"},{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"u\"}},\"Property\":\"Total Crimes Reported\"}},\"Function\":0},\"Name\":\"Sum(us crime dataset.Total Crimes Reported)\",\"NativeReferenceName\":\" Total Crimes Reported\"},{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"u\"}},\"Property\":\"population\"}},\"Function\":0},\"Name\":\"Sum(us crime dataset.population)\",\"NativeReferenceName\":\"Total population\"}],\"OrderBy\":[{\"Direction\":1,\"Expression\":{\"HierarchyLevel\":{\"Expression\":{\"Hierarchy\":{\"Expression\":{\"PropertyVariationSource\":{\"Expression\":{\"SourceRef\":{\"Source\":\"u\"}},\"Name\":\"Variation\",\"Property\":\"report_year\"}},\"Hierarchy\":\"Date Hierarchy\"}},\"Level\":\"Year\"}}}]},\"columnProperties\":{\"Sum(us crime dataset.population)\":{\"displayName\":\"Total population\"},\"Sum(us crime dataset.Total Crimes Reported)\":{\"displayName\":\" Total Crimes Reported\"}},\"drillFilterOtherVisuals\":true,\"hasDefaultSort\":true,\"objects\":{\"dataPoint\":[{\"properties\":{\"fill\":{\"solid\":{\"color\":{\"expr\":{\"ThemeDataColor\":{\"ColorId\":0,\"Percent\":-0.6}}}}}}},{\"properties\":{\"fill\":{\"solid\":{\"color\":{\"expr\":{\"ThemeDataColor\":{\"ColorId\":1,\"Percent\":0.1}}}}}},\"selector\":{\"metadata\":\"Sum(us crime dataset.Total Crimes Reported)\"}},{\"properties\":{\"fill\":{\"solid\":{\"color\":{\"expr\":{\"ThemeDataColor\":{\"ColorId\":0,\"Percent\":-0.3}}}}}},\"selector\":{\"metadata\":\"Sum(us crime dataset.population)\"}}],\"legend\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}}}}]},\"vcObjects\":{\"title\":[{\"properties\":{\"titleWrap\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}},\"fontColor\":{\"solid\":{\"color\":{\"expr\":{\"ThemeDataColor\":{\"ColorId\":0,\"Percent\":0}}}}},\"background\":{\"solid\":{\"color\":{\"expr\":{\"ThemeDataColor\":{\"ColorId\":9,\"Percent\":0}}}}},\"alignment\":{\"expr\":{\"Literal\":{\"Value\":\"'center'\"}}}}}],\"background\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}},\"transparency\":{\"expr\":{\"Literal\":{\"Value\":\"0D\"}}}}}],\"border\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}},\"radius\":{\"expr\":{\"Literal\":{\"Value\":\"30D\"}}}}}]}}}",
+          "filters": "[]",
+          "height": 457.14,
+          "width": 372.86,
+          "x": 545.71,
+          "y": 262.86,
+          "z": 1000.00
+        },
+        {
+          "config": "{\"name\":\"6ce18242e6fa139f5c77\",\"layouts\":[{\"id\":0,\"position\":{\"x\":918.5714285714287,\"y\":188.57142857142858,\"z\":0,\"width\":361.42857142857144,\"height\":531.4285714285714,\"tabOrder\":0}}],\"singleVisual\":{\"visualType\":\"clusteredColumnChart\",\"projections\":{\"Category\":[{\"queryRef\":\"us crime dataset.agency_jurisdiction\",\"active\":true}],\"Y\":[{\"queryRef\":\"CountNonNull(us crime dataset.Total Crimes Reported)\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"u\",\"Entity\":\"us crime dataset\",\"Type\":0}],\"Select\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"u\"}},\"Property\":\"agency_jurisdiction\"},\"Name\":\"us crime dataset.agency_jurisdiction\",\"NativeReferenceName\":\"State\"},{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"u\"}},\"Property\":\"Total Crimes Reported\"}},\"Function\":0},\"Name\":\"CountNonNull(us crime dataset.Total Crimes Reported)\",\"NativeReferenceName\":\" Total Crimes Reported\"}],\"OrderBy\":[{\"Direction\":2,\"Expression\":{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"u\"}},\"Property\":\"Total Crimes Reported\"}},\"Function\":0}}}]},\"columnProperties\":{\"us crime dataset.agency_jurisdiction\":{\"displayName\":\"State\"},\"CountNonNull(us crime dataset.Total Crimes Reported)\":{\"displayName\":\" Total Crimes Reported\"}},\"drillFilterOtherVisuals\":true,\"hasDefaultSort\":true,\"objects\":{\"dataPoint\":[{\"properties\":{\"fill\":{\"solid\":{\"color\":{\"expr\":{\"ThemeDataColor\":{\"ColorId\":0,\"Percent\":-0.6}}}}}}}]},\"vcObjects\":{\"title\":[{\"properties\":{\"background\":{\"solid\":{\"color\":{\"expr\":{\"ThemeDataColor\":{\"ColorId\":9,\"Percent\":0}}}}},\"fontColor\":{\"solid\":{\"color\":{\"expr\":{\"ThemeDataColor\":{\"ColorId\":0,\"Percent\":0}}}}},\"alignment\":{\"expr\":{\"Literal\":{\"Value\":\"'center'\"}}},\"text\":{\"expr\":{\"Literal\":{\"Value\":\"' Total Crimes Reported by Top 10 State'\"}}}}}],\"border\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}},\"radius\":{\"expr\":{\"Literal\":{\"Value\":\"30D\"}}}}}]}}}",
+          "filters": "[{\"expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Entity\":\"us crime dataset\"}},\"Property\":\"agency_jurisdiction\"}},\"filter\":{\"Version\":2,\"From\":[{\"Name\":\"subquery\",\"Expression\":{\"Subquery\":{\"Query\":{\"Version\":2,\"From\":[{\"Name\":\"u\",\"Entity\":\"us crime dataset\",\"Type\":0}],\"Select\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"u\"}},\"Property\":\"agency_jurisdiction\"},\"Name\":\"field\"}],\"OrderBy\":[{\"Direction\":2,\"Expression\":{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"u\"}},\"Property\":\"Total Crimes Reported\"}},\"Function\":0}}}],\"Top\":10}}},\"Type\":2},{\"Name\":\"u\",\"Entity\":\"us crime dataset\",\"Type\":0}],\"Where\":[{\"Condition\":{\"In\":{\"Expressions\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"u\"}},\"Property\":\"agency_jurisdiction\"}}],\"Table\":{\"SourceRef\":{\"Source\":\"subquery\"}}}}}]},\"type\":\"TopN\",\"howCreated\":0,\"isHiddenInViewMode\":false}]",
+          "height": 531.43,
+          "width": 361.43,
+          "x": 918.57,
+          "y": 188.57,
+          "z": 0.00
+        },
+        {
+          "config": "{\"name\":\"fec4ef094064ba63add8\",\"layouts\":[{\"id\":0,\"position\":{\"x\":918.5714285714287,\"y\":81.42857142857143,\"z\":5000,\"width\":361.42857142857144,\"height\":107.14285714285715,\"tabOrder\":5000}}],\"singleVisual\":{\"visualType\":\"slicer\",\"projections\":{\"Values\":[{\"queryRef\":\"us crime dataset.agency_jurisdiction\",\"active\":true}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"u\",\"Entity\":\"us crime dataset\",\"Type\":0}],\"Select\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"u\"}},\"Property\":\"agency_jurisdiction\"},\"Name\":\"us crime dataset.agency_jurisdiction\",\"NativeReferenceName\":\"agency_jurisdiction\"}]},\"drillFilterOtherVisuals\":true,\"objects\":{\"data\":[{\"properties\":{\"mode\":{\"expr\":{\"Literal\":{\"Value\":\"'Dropdown'\"}}},\"isInvertedSelectionMode\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}}}}],\"header\":[{\"properties\":{\"text\":{\"expr\":{\"Literal\":{\"Value\":\"'Select the State'\"}}},\"show\":{\"expr\":{\"Literal\":{\"Value\":\"false\"}}}}}],\"general\":[{\"properties\":{\"orientation\":{\"expr\":{\"Literal\":{\"Value\":\"1D\"}}}}}],\"selection\":[{\"properties\":{\"singleSelect\":{\"expr\":{\"Literal\":{\"Value\":\"false\"}}},\"selectAllCheckboxEnabled\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}}}}]},\"vcObjects\":{\"title\":[{\"properties\":{\"titleWrap\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}},\"fontColor\":{\"solid\":{\"color\":{\"expr\":{\"ThemeDataColor\":{\"ColorId\":0,\"Percent\":0}}}}},\"background\":{\"solid\":{\"color\":{\"expr\":{\"ThemeDataColor\":{\"ColorId\":9,\"Percent\":0}}}}},\"alignment\":{\"expr\":{\"Literal\":{\"Value\":\"'center'\"}}},\"show\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}},\"text\":{\"expr\":{\"Literal\":{\"Value\":\"'Select the Area'\"}}}}}],\"background\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}},\"transparency\":{\"expr\":{\"Literal\":{\"Value\":\"0D\"}}}}}],\"border\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}},\"radius\":{\"expr\":{\"Literal\":{\"Value\":\"30D\"}}}}}]}}}",
+          "filters": "[]",
+          "height": 107.14,
+          "width": 361.43,
+          "x": 918.57,
+          "y": 81.43,
+          "z": 5000.00
+        }
+      ],
+      "width": 1280.00
+    },
+    {
+      "config": "{}",
+      "displayName": "Population vs crimes",
+      "displayOption": 1,
+      "filters": "[]",
+      "height": 720.00,
+      "name": "ReportSection15221cf3b8e4383d7c15",
+      "ordinal": 2,
+      "visualContainers": [
+        {
+          "config": "{\"name\":\"111f958c430e03e5c090\",\"layouts\":[{\"id\":0,\"position\":{\"x\":0,\"y\":0,\"z\":0,\"width\":1280.682534296379,\"height\":720.7562169761015,\"tabOrder\":0}}],\"singleVisual\":{\"visualType\":\"lineChart\",\"projections\":{\"Category\":[{\"queryRef\":\"us crime dataset.report_year.Variation.Date Hierarchy.Year\",\"active\":true}],\"Y2\":[{\"queryRef\":\"Sum(us crime dataset.Total Crimes Reported)\"}],\"Y\":[{\"queryRef\":\"Sum(us crime dataset.population)\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"u\",\"Entity\":\"us crime dataset\",\"Type\":0}],\"Select\":[{\"HierarchyLevel\":{\"Expression\":{\"Hierarchy\":{\"Expression\":{\"PropertyVariationSource\":{\"Expression\":{\"SourceRef\":{\"Source\":\"u\"}},\"Name\":\"Variation\",\"Property\":\"report_year\"}},\"Hierarchy\":\"Date Hierarchy\"}},\"Level\":\"Year\"},\"Name\":\"us crime dataset.report_year.Variation.Date Hierarchy.Year\",\"NativeReferenceName\":\"report_year Year\"},{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"u\"}},\"Property\":\"Total Crimes Reported\"}},\"Function\":0},\"Name\":\"Sum(us crime dataset.Total Crimes Reported)\",\"NativeReferenceName\":\" Total Crimes Reported\"},{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"u\"}},\"Property\":\"population\"}},\"Function\":0},\"Name\":\"Sum(us crime dataset.population)\",\"NativeReferenceName\":\"Total population\"}],\"OrderBy\":[{\"Direction\":1,\"Expression\":{\"HierarchyLevel\":{\"Expression\":{\"Hierarchy\":{\"Expression\":{\"PropertyVariationSource\":{\"Expression\":{\"SourceRef\":{\"Source\":\"u\"}},\"Name\":\"Variation\",\"Property\":\"report_year\"}},\"Hierarchy\":\"Date Hierarchy\"}},\"Level\":\"Year\"}}}]},\"columnProperties\":{\"Sum(us crime dataset.population)\":{\"displayName\":\"Total population\"},\"Sum(us crime dataset.Total Crimes Reported)\":{\"displayName\":\" Total Crimes Reported\"}},\"drillFilterOtherVisuals\":true,\"hasDefaultSort\":true,\"objects\":{\"dataPoint\":[{\"properties\":{\"fill\":{\"solid\":{\"color\":{\"expr\":{\"ThemeDataColor\":{\"ColorId\":0,\"Percent\":-0.6}}}}}}},{\"properties\":{\"fill\":{\"solid\":{\"color\":{\"expr\":{\"ThemeDataColor\":{\"ColorId\":1,\"Percent\":0.1}}}}}},\"selector\":{\"metadata\":\"Sum(us crime dataset.Total Crimes Reported)\"}},{\"properties\":{\"fill\":{\"solid\":{\"color\":{\"expr\":{\"ThemeDataColor\":{\"ColorId\":0,\"Percent\":-0.3}}}}}},\"selector\":{\"metadata\":\"Sum(us crime dataset.population)\"}}],\"legend\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}}}}]},\"vcObjects\":{\"title\":[{\"properties\":{\"titleWrap\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}},\"fontColor\":{\"solid\":{\"color\":{\"expr\":{\"ThemeDataColor\":{\"ColorId\":0,\"Percent\":0}}}}},\"background\":{\"solid\":{\"color\":{\"expr\":{\"ThemeDataColor\":{\"ColorId\":9,\"Percent\":0}}}}},\"alignment\":{\"expr\":{\"Literal\":{\"Value\":\"'center'\"}}}}}],\"background\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}},\"transparency\":{\"expr\":{\"Literal\":{\"Value\":\"0D\"}}}}}],\"border\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}},\"radius\":{\"expr\":{\"Literal\":{\"Value\":\"30D\"}}}}}]}}}",
+          "filters": "[]",
+          "height": 720.76,
+          "width": 1280.68,
+          "x": 0.00,
+          "y": 0.00,
+          "z": 0.00
+        }
+      ],
+      "width": 1280.00
+    },
+    {
+      "config": "{}",
+      "displayName": "Crimes in diff.locations",
+      "displayOption": 1,
+      "filters": "[]",
+      "height": 720.00,
+      "name": "ReportSectionadb70f613b5b1b89a0d7",
+      "ordinal": 3,
+      "visualContainers": [
+        {
+          "config": "{\"name\":\"e20d2977924726a0e326\",\"layouts\":[{\"id\":0,\"position\":{\"x\":0,\"y\":0,\"z\":0,\"width\":1242.957002278346,\"height\":720.7562169761015,\"tabOrder\":0}}],\"singleVisual\":{\"visualType\":\"map\",\"projections\":{\"Category\":[{\"queryRef\":\"us crime dataset.agency_jurisdiction\",\"active\":true}],\"Size\":[{\"queryRef\":\"Sum(us crime dataset.Total Crimes Reported)\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"u\",\"Entity\":\"us crime dataset\",\"Type\":0}],\"Select\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"u\"}},\"Property\":\"agency_jurisdiction\"},\"Name\":\"us crime dataset.agency_jurisdiction\",\"NativeReferenceName\":\"agency_jurisdiction\"},{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"u\"}},\"Property\":\"Total Crimes Reported\"}},\"Function\":0},\"Name\":\"Sum(us crime dataset.Total Crimes Reported)\",\"NativeReferenceName\":\"Sum of Total Crimes Reported\"}]},\"drillFilterOtherVisuals\":true,\"objects\":{\"legend\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}}}}],\"dataPoint\":[{\"properties\":{\"fill\":{\"solid\":{\"color\":{\"expr\":{\"ThemeDataColor\":{\"ColorId\":0,\"Percent\":-0.6}}}}}}},{\"properties\":{\"fill\":{\"solid\":{\"color\":{\"expr\":{\"ThemeDataColor\":{\"ColorId\":1,\"Percent\":0.1}}}}}},\"selector\":{\"metadata\":\"Sum(us crime dataset.Total Crimes Reported)\"}},{\"properties\":{\"fill\":{\"solid\":{\"color\":{\"expr\":{\"ThemeDataColor\":{\"ColorId\":0,\"Percent\":-0.3}}}}}},\"selector\":{\"metadata\":\"Sum(us crime dataset.population)\"}}],\"mapStyles\":[{\"properties\":{\"mapTheme\":{\"expr\":{\"Literal\":{\"Value\":\"'canvasLight'\"}}}}}]},\"vcObjects\":{\"title\":[{\"properties\":{\"titleWrap\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}},\"fontColor\":{\"solid\":{\"color\":{\"expr\":{\"ThemeDataColor\":{\"ColorId\":0,\"Percent\":0}}}}},\"background\":{\"solid\":{\"color\":{\"expr\":{\"ThemeDataColor\":{\"ColorId\":9,\"Percent\":0}}}}},\"alignment\":{\"expr\":{\"Literal\":{\"Value\":\"'center'\"}}},\"text\":{\"expr\":{\"Literal\":{\"Value\":\"' Total Crimes Reported State Wise'\"}}}}}],\"background\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}},\"transparency\":{\"expr\":{\"Literal\":{\"Value\":\"0D\"}}}}}],\"border\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}},\"radius\":{\"expr\":{\"Literal\":{\"Value\":\"30D\"}}}}}]}}}",
+          "filters": "[]",
+          "height": 720.76,
+          "width": 1242.96,
+          "x": 0.00,
+          "y": 0.00,
+          "z": 0.00
+        }
+      ],
+      "width": 1280.00
+    },
+    {
+      "config": "{}",
+      "displayName": "top 10 states with max. crimes",
+      "displayOption": 1,
+      "filters": "[]",
+      "height": 720.00,
+      "name": "ReportSectione3ef4b3034b39b5069e9",
+      "ordinal": 1,
+      "visualContainers": [
+        {
+          "config": "{\"name\":\"c7bc63c92719237a9304\",\"layouts\":[{\"id\":0,\"position\":{\"x\":0,\"y\":0,\"z\":0,\"width\":1280.682534296379,\"height\":720.7562169761015,\"tabOrder\":0}}],\"singleVisual\":{\"visualType\":\"clusteredColumnChart\",\"projections\":{\"Category\":[{\"queryRef\":\"us crime dataset.agency_jurisdiction\",\"active\":true}],\"Y\":[{\"queryRef\":\"CountNonNull(us crime dataset.Total Crimes Reported)\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"u\",\"Entity\":\"us crime dataset\",\"Type\":0}],\"Select\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"u\"}},\"Property\":\"agency_jurisdiction\"},\"Name\":\"us crime dataset.agency_jurisdiction\",\"NativeReferenceName\":\"State\"},{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"u\"}},\"Property\":\"Total Crimes Reported\"}},\"Function\":0},\"Name\":\"CountNonNull(us crime dataset.Total Crimes Reported)\",\"NativeReferenceName\":\" Total Crimes Reported\"}],\"OrderBy\":[{\"Direction\":2,\"Expression\":{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"u\"}},\"Property\":\"Total Crimes Reported\"}},\"Function\":0}}}]},\"columnProperties\":{\"us crime dataset.agency_jurisdiction\":{\"displayName\":\"State\"},\"CountNonNull(us crime dataset.Total Crimes Reported)\":{\"displayName\":\" Total Crimes Reported\"}},\"drillFilterOtherVisuals\":true,\"hasDefaultSort\":true,\"objects\":{\"dataPoint\":[{\"properties\":{\"fill\":{\"solid\":{\"color\":{\"expr\":{\"ThemeDataColor\":{\"ColorId\":0,\"Percent\":-0.6}}}}}}}]},\"vcObjects\":{\"title\":[{\"properties\":{\"background\":{\"solid\":{\"color\":{\"expr\":{\"ThemeDataColor\":{\"ColorId\":9,\"Percent\":0}}}}},\"fontColor\":{\"solid\":{\"color\":{\"expr\":{\"ThemeDataColor\":{\"ColorId\":0,\"Percent\":0}}}}},\"alignment\":{\"expr\":{\"Literal\":{\"Value\":\"'center'\"}}},\"text\":{\"expr\":{\"Literal\":{\"Value\":\"' Total Crimes Reported by Top 10 State'\"}}}}}],\"border\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}},\"radius\":{\"expr\":{\"Literal\":{\"Value\":\"30D\"}}}}}]}}}",
+          "filters": "[{\"expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Entity\":\"us crime dataset\"}},\"Property\":\"agency_jurisdiction\"}},\"filter\":{\"Version\":2,\"From\":[{\"Name\":\"subquery\",\"Expression\":{\"Subquery\":{\"Query\":{\"Version\":2,\"From\":[{\"Name\":\"u\",\"Entity\":\"us crime dataset\",\"Type\":0}],\"Select\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"u\"}},\"Property\":\"agency_jurisdiction\"},\"Name\":\"field\"}],\"OrderBy\":[{\"Direction\":2,\"Expression\":{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"u\"}},\"Property\":\"Total Crimes Reported\"}},\"Function\":0}}}],\"Top\":10}}},\"Type\":2},{\"Name\":\"u\",\"Entity\":\"us crime dataset\",\"Type\":0}],\"Where\":[{\"Condition\":{\"In\":{\"Expressions\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"u\"}},\"Property\":\"agency_jurisdiction\"}}],\"Table\":{\"SourceRef\":{\"Source\":\"subquery\"}}}}}]},\"type\":\"TopN\",\"howCreated\":0,\"isHiddenInViewMode\":false}]",
+          "height": 720.76,
+          "width": 1280.68,
+          "x": 0.00,
+          "y": 0.00,
+          "z": 0.00
+        }
+      ],
+      "width": 1280.00
+    }
+  ]
+}

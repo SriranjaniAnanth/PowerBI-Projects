@@ -1,0 +1,603 @@
+{
+  "compatibilityLevel": 1550,
+  "model": {
+    "annotations": [
+      {
+        "name": "PBI_QueryOrder",
+        "value": "[\"World Bank Indicators xlsx - Data by country\"]"
+      },
+      {
+        "name": "__PBI_TimeIntelligenceEnabled",
+        "value": "1"
+      },
+      {
+        "name": "PBIDesktopVersion",
+        "value": "2.124.1052.0 (23.12)"
+      },
+      {
+        "name": "PBI_ProTooling",
+        "value": "[\"DevMode\"]"
+      }
+    ],
+    "culture": "en-US",
+    "cultures": [
+      {
+        "name": "en-US",
+        "linguisticMetadata": {
+          "content": {
+            "DynamicImprovement": "HighConfidence",
+            "Language": "en-US",
+            "Version": "1.0.0"
+          },
+          "contentType": "json"
+        }
+      }
+    ],
+    "dataAccessOptions": {
+      "legacyRedirects": true,
+      "returnErrorValuesAsNull": true
+    },
+    "defaultPowerBIDataSourceVersion": "powerBI_V3",
+    "relationships": [
+      {
+        "name": "9fa1f626-6d67-4a50-9373-944f2a652743",
+        "fromColumn": "Date",
+        "fromTable": "World Bank Indicators xlsx - Data by country",
+        "joinOnDateBehavior": "datePartOnly",
+        "toColumn": "Date",
+        "toTable": "LocalDateTable_0fe54666-10ac-4f1b-9918-a6e64834b2a1"
+      }
+    ],
+    "sourceQueryCulture": "en-IN",
+    "tables": [
+      {
+        "name": "World Bank Indicators xlsx - Data by country",
+        "annotations": [
+          {
+            "name": "PBI_NavigationStepName",
+            "value": "Navigation"
+          },
+          {
+            "name": "PBI_ResultType",
+            "value": "Table"
+          }
+        ],
+        "columns": [
+          {
+            "name": "Country Name",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "7411a078-0dca-49ed-8614-0fa9ef083202",
+            "sourceColumn": "Country Name",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Date",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              },
+              {
+                "name": "UnderlyingDateTimeDataType",
+                "value": "Date"
+              }
+            ],
+            "dataType": "dateTime",
+            "formatString": "Long Date",
+            "lineageTag": "7bc13998-f1d9-4f0d-8089-098e5746acec",
+            "sourceColumn": "Date",
+            "summarizeBy": "none",
+            "variations": [
+              {
+                "name": "Variation",
+                "defaultHierarchy": {
+                  "hierarchy": "Date Hierarchy",
+                  "table": "LocalDateTable_0fe54666-10ac-4f1b-9918-a6e64834b2a1"
+                },
+                "isDefault": true,
+                "relationship": "9fa1f626-6d67-4a50-9373-944f2a652743"
+              }
+            ]
+          },
+          {
+            "name": "Population: Total (count)",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "int64",
+            "formatString": "0",
+            "lineageTag": "19fb7ab0-439b-4705-a1c0-1cd5e0d62012",
+            "sourceColumn": "Population: Total (count)",
+            "summarizeBy": "sum"
+          },
+          {
+            "name": "Finance: GDP (current US$)",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "int64",
+            "formatString": "0",
+            "lineageTag": "1d231486-4e44-4ecb-a312-6c3256765ee6",
+            "sourceColumn": "Finance: GDP (current US$)",
+            "summarizeBy": "sum"
+          },
+          {
+            "name": "GDP_Percapita",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              },
+              {
+                "name": "PBI_FormatHint",
+                "value": "{\"isGeneralNumber\":true}"
+              }
+            ],
+            "dataType": "double",
+            "lineageTag": "1e1bb557-f4ff-4e75-9b0b-3d8ac2da5448",
+            "sourceColumn": "GDP_Percapita",
+            "summarizeBy": "sum"
+          }
+        ],
+        "lineageTag": "0037cc40-9f1f-4e83-98dc-217d98e41041",
+        "partitions": [
+          {
+            "name": "World Bank Indicators xlsx - Data by country",
+            "mode": "import",
+            "source": {
+              "expression": [
+                "let",
+                "    Source = Csv.Document(File.Contents(\"E:\\DATA ANALYTICS\\PowerBI\\6_gdp_population\\World Bank Indicators.xlsx - Data by country.csv\"),[Delimiter=\",\", Columns=20, Encoding=1252, QuoteStyle=QuoteStyle.None]),",
+                "    #\"Promoted Headers\" = Table.PromoteHeaders(Source, [PromoteAllScalars=true]),",
+                "    #\"Removed Columns\" = Table.RemoveColumns(#\"Promoted Headers\",{\"Transit: Railways, (million passenger-km)\", \"Transit: Passenger cars (per 1,000 people)\", \"Business: Mobile phone subscribers\", \"Business: Internet users (per 100 people)\", \"Health: Mortality, under-5 (per 1,000 live births)\", \"Health: Health expenditure per capita (current US$)\", \"Health: Health expenditure, total (% GDP)\", \"Population:: Birth rate, crude (per 1,000)\", \"Health: Life expectancy at birth, female (years)\", \"Health: Life expectancy at birth, male (years)\", \"Health: Life expectancy at birth, total (years)\", \"Population: Ages 0-14 (% of total)\", \"Population: Ages 15-64 (% of total)\", \"Population: Ages 65+ (% of total)\", \"Finance: GDP per capita (current US$)\", \"Population: Urban (count)\"}),",
+                "    #\"Replaced Value\" = Table.ReplaceValue(#\"Removed Columns\",\"\",\"00\",Replacer.ReplaceValue,{\"Finance: GDP (current US$)\"}),",
+                "    #\"Changed Type\" = Table.TransformColumnTypes(#\"Replaced Value\",{{\"Finance: GDP (current US$)\", Int64.Type}, {\"Population: Total (count)\", Int64.Type}}),",
+                "    #\"Added Custom\" = Table.AddColumn(#\"Changed Type\", \"Custom\", each [#\"Finance: GDP (current US$)\"]/[#\"Population: Total (count)\"]),",
+                "    #\"Renamed Columns\" = Table.RenameColumns(#\"Added Custom\",{{\"Custom\", \"GDP_Percapita\"}}),",
+                "    #\"Changed Type1\" = Table.TransformColumnTypes(#\"Renamed Columns\",{{\"GDP_Percapita\", type number}}),",
+                "    #\"Sorted Rows\" = Table.Sort(#\"Changed Type1\",{{\"GDP_Percapita\", Order.Ascending}}),",
+                "    #\"Multiplied Column\" = Table.TransformColumns(#\"Sorted Rows\", {{\"GDP_Percapita\", each _ * 100000, type number}}),",
+                "    #\"Changed Type2\" = Table.TransformColumnTypes(#\"Multiplied Column\",{{\"Date\", type date}})",
+                "in",
+                "    #\"Changed Type2\""
+              ],
+              "type": "m"
+            }
+          }
+        ]
+      },
+      {
+        "name": "DateTableTemplate_299774d8-aabf-4f67-a5e6-81329ab9b312",
+        "annotations": [
+          {
+            "name": "__PBI_TemplateDateTable",
+            "value": "true"
+          },
+          {
+            "name": "DefaultItem",
+            "value": "DateHierarchy"
+          }
+        ],
+        "columns": [
+          {
+            "name": "Date",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "User"
+              }
+            ],
+            "dataCategory": "PaddedDateTableDates",
+            "dataType": "dateTime",
+            "isDataTypeInferred": true,
+            "isHidden": true,
+            "isNameInferred": true,
+            "lineageTag": "2a6d50e6-9769-474b-b4e4-7458cd63dda6",
+            "sourceColumn": "[Date]",
+            "summarizeBy": "none",
+            "type": "calculatedTableColumn"
+          },
+          {
+            "name": "Year",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "User"
+              },
+              {
+                "name": "TemplateId",
+                "value": "Year"
+              }
+            ],
+            "dataCategory": "Years",
+            "dataType": "int64",
+            "expression": "YEAR([Date])",
+            "isDataTypeInferred": true,
+            "isHidden": true,
+            "lineageTag": "a1aac27d-9f7b-453e-aefc-93f5ff143e9c",
+            "summarizeBy": "none",
+            "type": "calculated"
+          },
+          {
+            "name": "MonthNo",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "User"
+              },
+              {
+                "name": "TemplateId",
+                "value": "MonthNumber"
+              }
+            ],
+            "dataCategory": "MonthOfYear",
+            "dataType": "int64",
+            "expression": "MONTH([Date])",
+            "isDataTypeInferred": true,
+            "isHidden": true,
+            "lineageTag": "b628089b-2043-4623-8f45-9799d81aa9f6",
+            "summarizeBy": "none",
+            "type": "calculated"
+          },
+          {
+            "name": "Month",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "User"
+              },
+              {
+                "name": "TemplateId",
+                "value": "Month"
+              }
+            ],
+            "dataCategory": "Months",
+            "dataType": "string",
+            "expression": "FORMAT([Date], \"MMMM\")",
+            "isDataTypeInferred": true,
+            "isHidden": true,
+            "lineageTag": "52a8121f-bd58-4531-9c46-132124d02f4e",
+            "sortByColumn": "MonthNo",
+            "summarizeBy": "none",
+            "type": "calculated"
+          },
+          {
+            "name": "QuarterNo",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "User"
+              },
+              {
+                "name": "TemplateId",
+                "value": "QuarterNumber"
+              }
+            ],
+            "dataCategory": "QuarterOfYear",
+            "dataType": "int64",
+            "expression": "INT(([MonthNo] + 2) / 3)",
+            "isDataTypeInferred": true,
+            "isHidden": true,
+            "lineageTag": "9f6409cc-aef6-4569-a66b-5b23e30281a0",
+            "summarizeBy": "none",
+            "type": "calculated"
+          },
+          {
+            "name": "Quarter",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "User"
+              },
+              {
+                "name": "TemplateId",
+                "value": "Quarter"
+              }
+            ],
+            "dataCategory": "Quarters",
+            "dataType": "string",
+            "expression": "\"Qtr \" & [QuarterNo]",
+            "isDataTypeInferred": true,
+            "isHidden": true,
+            "lineageTag": "a6568698-a035-424b-a415-940a4a4150a1",
+            "sortByColumn": "QuarterNo",
+            "summarizeBy": "none",
+            "type": "calculated"
+          },
+          {
+            "name": "Day",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "User"
+              },
+              {
+                "name": "TemplateId",
+                "value": "Day"
+              }
+            ],
+            "dataCategory": "DayOfMonth",
+            "dataType": "int64",
+            "expression": "DAY([Date])",
+            "isDataTypeInferred": true,
+            "isHidden": true,
+            "lineageTag": "1d74acd6-289a-4b75-b12d-22b4d4c6ccaa",
+            "summarizeBy": "none",
+            "type": "calculated"
+          }
+        ],
+        "hierarchies": [
+          {
+            "name": "Date Hierarchy",
+            "annotations": [
+              {
+                "name": "TemplateId",
+                "value": "DateHierarchy"
+              }
+            ],
+            "levels": [
+              {
+                "name": "Year",
+                "column": "Year",
+                "lineageTag": "acd693a4-2633-4111-b9b6-0e006bfd30cb",
+                "ordinal": 0
+              },
+              {
+                "name": "Quarter",
+                "column": "Quarter",
+                "lineageTag": "da3743c1-74d2-420d-a4bc-678bccbfc82c",
+                "ordinal": 1
+              },
+              {
+                "name": "Month",
+                "column": "Month",
+                "lineageTag": "732c29cc-9ce0-4c11-937a-89aee9121c26",
+                "ordinal": 2
+              },
+              {
+                "name": "Day",
+                "column": "Day",
+                "lineageTag": "f5986738-b580-44da-9d6b-7a30c0af5076",
+                "ordinal": 3
+              }
+            ],
+            "lineageTag": "8e460cbc-bcb6-46eb-acd6-79704ca8ad20"
+          }
+        ],
+        "isHidden": true,
+        "isPrivate": true,
+        "lineageTag": "25b55446-9c9a-4464-87bd-7dd691312640",
+        "partitions": [
+          {
+            "name": "DateTableTemplate_299774d8-aabf-4f67-a5e6-81329ab9b312",
+            "mode": "import",
+            "source": {
+              "expression": "Calendar(Date(2015,1,1), Date(2015,1,1))",
+              "type": "calculated"
+            }
+          }
+        ]
+      },
+      {
+        "name": "LocalDateTable_0fe54666-10ac-4f1b-9918-a6e64834b2a1",
+        "annotations": [
+          {
+            "name": "__PBI_LocalDateTable",
+            "value": "true"
+          }
+        ],
+        "columns": [
+          {
+            "name": "Date",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "User"
+              }
+            ],
+            "dataCategory": "PaddedDateTableDates",
+            "dataType": "dateTime",
+            "isDataTypeInferred": true,
+            "isHidden": true,
+            "isNameInferred": true,
+            "lineageTag": "fe49afc9-b62b-4f51-ae20-fa70b6793f79",
+            "sourceColumn": "[Date]",
+            "summarizeBy": "none",
+            "type": "calculatedTableColumn"
+          },
+          {
+            "name": "Year",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "User"
+              },
+              {
+                "name": "TemplateId",
+                "value": "Year"
+              }
+            ],
+            "dataCategory": "Years",
+            "dataType": "int64",
+            "expression": "YEAR([Date])",
+            "isDataTypeInferred": true,
+            "isHidden": true,
+            "lineageTag": "f40bb5cc-7300-4abd-b557-5db27f5275e3",
+            "summarizeBy": "none",
+            "type": "calculated"
+          },
+          {
+            "name": "MonthNo",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "User"
+              },
+              {
+                "name": "TemplateId",
+                "value": "MonthNumber"
+              }
+            ],
+            "dataCategory": "MonthOfYear",
+            "dataType": "int64",
+            "expression": "MONTH([Date])",
+            "isDataTypeInferred": true,
+            "isHidden": true,
+            "lineageTag": "9a6a19c1-7e27-4169-a676-4ff107b5f3b6",
+            "summarizeBy": "none",
+            "type": "calculated"
+          },
+          {
+            "name": "Month",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "User"
+              },
+              {
+                "name": "TemplateId",
+                "value": "Month"
+              }
+            ],
+            "dataCategory": "Months",
+            "dataType": "string",
+            "expression": "FORMAT([Date], \"MMMM\")",
+            "isDataTypeInferred": true,
+            "isHidden": true,
+            "lineageTag": "4a851083-74fe-4b0f-b46f-d78176d879c8",
+            "sortByColumn": "MonthNo",
+            "summarizeBy": "none",
+            "type": "calculated"
+          },
+          {
+            "name": "QuarterNo",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "User"
+              },
+              {
+                "name": "TemplateId",
+                "value": "QuarterNumber"
+              }
+            ],
+            "dataCategory": "QuarterOfYear",
+            "dataType": "int64",
+            "expression": "INT(([MonthNo] + 2) / 3)",
+            "isDataTypeInferred": true,
+            "isHidden": true,
+            "lineageTag": "8e4fa331-fc52-4d98-b9d2-2cfae63cda6b",
+            "summarizeBy": "none",
+            "type": "calculated"
+          },
+          {
+            "name": "Quarter",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "User"
+              },
+              {
+                "name": "TemplateId",
+                "value": "Quarter"
+              }
+            ],
+            "dataCategory": "Quarters",
+            "dataType": "string",
+            "expression": "\"Qtr \" & [QuarterNo]",
+            "isDataTypeInferred": true,
+            "isHidden": true,
+            "lineageTag": "897b7259-310f-436a-bfa6-0ff938fda518",
+            "sortByColumn": "QuarterNo",
+            "summarizeBy": "none",
+            "type": "calculated"
+          },
+          {
+            "name": "Day",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "User"
+              },
+              {
+                "name": "TemplateId",
+                "value": "Day"
+              }
+            ],
+            "dataCategory": "DayOfMonth",
+            "dataType": "int64",
+            "expression": "DAY([Date])",
+            "isDataTypeInferred": true,
+            "isHidden": true,
+            "lineageTag": "2471da64-61da-4f32-80ee-898ad096781a",
+            "summarizeBy": "none",
+            "type": "calculated"
+          }
+        ],
+        "hierarchies": [
+          {
+            "name": "Date Hierarchy",
+            "annotations": [
+              {
+                "name": "TemplateId",
+                "value": "DateHierarchy"
+              }
+            ],
+            "levels": [
+              {
+                "name": "Year",
+                "column": "Year",
+                "lineageTag": "93fafebe-ff6e-466a-81a8-772d1ac748ec",
+                "ordinal": 0
+              },
+              {
+                "name": "Quarter",
+                "column": "Quarter",
+                "lineageTag": "b08ed110-2915-48a5-8a08-e5c4b1d9e9d0",
+                "ordinal": 1
+              },
+              {
+                "name": "Month",
+                "column": "Month",
+                "lineageTag": "f9718110-60cf-49f0-b3da-7916fe6041fd",
+                "ordinal": 2
+              },
+              {
+                "name": "Day",
+                "column": "Day",
+                "lineageTag": "b3265965-3867-406c-89b8-2a487e055984",
+                "ordinal": 3
+              }
+            ],
+            "lineageTag": "28f322e6-1829-4e63-ac6a-b7f1b9af5755"
+          }
+        ],
+        "isHidden": true,
+        "lineageTag": "81f05aff-3bb7-4505-9cd3-8512063828fd",
+        "partitions": [
+          {
+            "name": "LocalDateTable_0fe54666-10ac-4f1b-9918-a6e64834b2a1",
+            "mode": "import",
+            "source": {
+              "expression": "Calendar(Date(Year(MIN('World Bank Indicators xlsx - Data by country'[Date])), 1, 1), Date(Year(MAX('World Bank Indicators xlsx - Data by country'[Date])), 12, 31))",
+              "type": "calculated"
+            }
+          }
+        ],
+        "showAsVariationsOnly": true
+      }
+    ]
+  }
+}

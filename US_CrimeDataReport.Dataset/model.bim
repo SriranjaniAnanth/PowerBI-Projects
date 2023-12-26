@@ -1,0 +1,730 @@
+{
+  "compatibilityLevel": 1550,
+  "model": {
+    "annotations": [
+      {
+        "name": "PBI_QueryOrder",
+        "value": "[\"us crime dataset\"]"
+      },
+      {
+        "name": "__PBI_TimeIntelligenceEnabled",
+        "value": "1"
+      },
+      {
+        "name": "PBIDesktopVersion",
+        "value": "2.124.1052.0 (23.12)"
+      },
+      {
+        "name": "PBI_ProTooling",
+        "value": "[\"DevMode\"]"
+      }
+    ],
+    "culture": "en-US",
+    "cultures": [
+      {
+        "name": "en-US",
+        "linguisticMetadata": {
+          "content": {
+            "DynamicImprovement": "HighConfidence",
+            "Entities": {
+              "us_crime_dataset.agency_jurisdiction": {
+                "Definition": {
+                  "Binding": {
+                    "ConceptualEntity": "us crime dataset",
+                    "ConceptualProperty": "agency_jurisdiction"
+                  }
+                },
+                "State": "Generated",
+                "Terms": [
+                  {
+                    "State": {
+                      "Source": {
+                        "Agent": "PowerBI.VisualColumnRename",
+                        "Type": "External"
+                      },
+                      "State": "Suggested",
+                      "Weight": 0.9
+                    }
+                  },
+                  {
+                    "Aera with Max Crimes": {
+                      "Source": {
+                        "Agent": "PowerBI.VisualColumnRename",
+                        "Type": "External"
+                      },
+                      "State": "Suggested",
+                      "Weight": 0.9
+                    }
+                  }
+                ]
+              }
+            },
+            "Language": "en-US",
+            "Version": "2.0.0"
+          },
+          "contentType": "json"
+        }
+      }
+    ],
+    "dataAccessOptions": {
+      "legacyRedirects": true,
+      "returnErrorValuesAsNull": true
+    },
+    "defaultPowerBIDataSourceVersion": "powerBI_V3",
+    "relationships": [
+      {
+        "name": "83abf66c-bb47-43cc-8385-8d9b330241ff",
+        "fromColumn": "report_year",
+        "fromTable": "us crime dataset",
+        "joinOnDateBehavior": "datePartOnly",
+        "toColumn": "Date",
+        "toTable": "LocalDateTable_b5a3da9e-5102-4ca1-92c2-78f8bd271401"
+      }
+    ],
+    "sourceQueryCulture": "en-IN",
+    "tables": [
+      {
+        "name": "us crime dataset",
+        "annotations": [
+          {
+            "name": "PBI_NavigationStepName",
+            "value": "Navigation"
+          },
+          {
+            "name": "PBI_ResultType",
+            "value": "Table"
+          }
+        ],
+        "columns": [
+          {
+            "name": "report_year",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              },
+              {
+                "name": "UnderlyingDateTimeDataType",
+                "value": "Date"
+              }
+            ],
+            "dataType": "dateTime",
+            "formatString": "Long Date",
+            "lineageTag": "d5a73a2b-bd69-45dc-9a8f-ff720cf67d94",
+            "sourceColumn": "report_year",
+            "summarizeBy": "none",
+            "variations": [
+              {
+                "name": "Variation",
+                "defaultHierarchy": {
+                  "hierarchy": "Date Hierarchy",
+                  "table": "LocalDateTable_b5a3da9e-5102-4ca1-92c2-78f8bd271401"
+                },
+                "isDefault": true,
+                "relationship": "83abf66c-bb47-43cc-8385-8d9b330241ff"
+              }
+            ]
+          },
+          {
+            "name": "agency_code",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "ef4b602b-5e26-4881-99fb-e370c05f663d",
+            "sourceColumn": "agency_code",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "agency_jurisdiction",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "ab4ef90d-6375-41cc-be75-a25a53c7e980",
+            "sourceColumn": "agency_jurisdiction",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "population",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "int64",
+            "formatString": "0",
+            "lineageTag": "6ea5e7e6-4165-4b53-a50a-a1caac2f51e5",
+            "sourceColumn": "population",
+            "summarizeBy": "sum"
+          },
+          {
+            "name": "violent_crimes",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              },
+              {
+                "name": "PBI_FormatHint",
+                "value": "{\"isGeneralNumber\":true}"
+              }
+            ],
+            "dataType": "double",
+            "lineageTag": "08fbb9e3-0075-4766-84f5-52b643b80ab4",
+            "sourceColumn": "violent_crimes",
+            "summarizeBy": "sum"
+          },
+          {
+            "name": "homicides",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              },
+              {
+                "name": "PBI_FormatHint",
+                "value": "{\"isGeneralNumber\":true}"
+              }
+            ],
+            "dataType": "double",
+            "lineageTag": "ee145bfd-9682-4cbe-9588-5e9d68aa2931",
+            "sourceColumn": "homicides",
+            "summarizeBy": "sum"
+          },
+          {
+            "name": "rapes",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              },
+              {
+                "name": "PBI_FormatHint",
+                "value": "{\"isGeneralNumber\":true}"
+              }
+            ],
+            "dataType": "double",
+            "lineageTag": "6a2aac7d-a0e3-4a0d-a288-71ebbb81bf9e",
+            "sourceColumn": "rapes",
+            "summarizeBy": "sum"
+          },
+          {
+            "name": "assaults",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "int64",
+            "formatString": "0",
+            "lineageTag": "3124625e-3f49-4c7b-a92f-7fa874109341",
+            "sourceColumn": "assaults",
+            "summarizeBy": "sum"
+          },
+          {
+            "name": "robberies",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "int64",
+            "formatString": "0",
+            "lineageTag": "bcdc9d9c-5534-4560-be71-ccd850b4c628",
+            "sourceColumn": "robberies",
+            "summarizeBy": "sum"
+          },
+          {
+            "name": "months_reported",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "int64",
+            "formatString": "0",
+            "lineageTag": "f63b7ec1-9b7b-40a2-a002-a5346bdc92d4",
+            "sourceColumn": "months_reported",
+            "summarizeBy": "sum"
+          },
+          {
+            "name": "Total Crimes Reported",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "int64",
+            "formatString": "0",
+            "lineageTag": "73bb4970-033f-4613-8c96-db3ece99a060",
+            "sourceColumn": "Total Crimes Reported",
+            "summarizeBy": "sum"
+          }
+        ],
+        "lineageTag": "d85eafb9-b5d6-40c7-bd42-9dbd16b364b3",
+        "partitions": [
+          {
+            "name": "us crime dataset",
+            "mode": "import",
+            "source": {
+              "expression": [
+                "let",
+                "    Source = Csv.Document(File.Contents(\"E:\\DATA ANALYTICS\\PowerBI\\4_US crime\\us crime dataset.csv\"),[Delimiter=\",\", Columns=15, Encoding=1252, QuoteStyle=QuoteStyle.None]),",
+                "    #\"Promoted Headers\" = Table.PromoteHeaders(Source, [PromoteAllScalars=true]),",
+                "    #\"Changed Type\" = Table.TransformColumnTypes(#\"Promoted Headers\",{{\"report_year\", Int64.Type}, {\"agency_code\", type text}, {\"agency_jurisdiction\", type text}, {\"population\", Int64.Type}, {\"violent_crimes\", Int64.Type}, {\"homicides\", Int64.Type}, {\"rapes\", Int64.Type}, {\"assaults\", Int64.Type}, {\"robberies\", Int64.Type}, {\"months_reported\", Int64.Type}, {\"crimes_percapita\", type number}, {\"homicides_percapita\", type number}, {\"rapes_percapita\", type number}, {\"assaults_percapita\", type number}, {\"robberies_percapita\", type number}}),",
+                "    #\"Added Prefix\" = Table.TransformColumns(#\"Changed Type\", {{\"report_year\", each \"1/1/\" & Text.From(_, \"en-IN\"), type text}}),",
+                "    #\"Changed Type1\" = Table.TransformColumnTypes(#\"Added Prefix\",{{\"report_year\", type date}}),",
+                "    #\"Replaced Value\" = Table.ReplaceValue(#\"Changed Type1\",\"\",\"NA\",Replacer.ReplaceValue,{\"agency_code\"}),",
+                "    #\"Filtered Rows\" = Table.SelectRows(#\"Replaced Value\", each true),",
+                "    #\"Filtered Rows1\" = Table.SelectRows(#\"Filtered Rows\", each [population] <> null and [population] <> \"\"),",
+                "    #\"Replaced Value1\" = Table.ReplaceValue(#\"Filtered Rows1\",null,0,Replacer.ReplaceValue,{\"violent_crimes\"}),",
+                "    #\"Replaced Value2\" = Table.ReplaceValue(#\"Replaced Value1\",null,0,Replacer.ReplaceValue,{\"homicides\"}),",
+                "    #\"Replaced Value3\" = Table.ReplaceValue(#\"Replaced Value2\",null,0,Replacer.ReplaceValue,{\"rapes\"}),",
+                "    #\"Added Custom\" = Table.AddColumn(#\"Replaced Value3\", \"Violent_crimes_percapita\", each [violent_crimes]/[population]),",
+                "    #\"Removed Columns\" = Table.RemoveColumns(#\"Added Custom\",{\"crimes_percapita\", \"homicides_percapita\", \"rapes_percapita\", \"assaults_percapita\", \"robberies_percapita\", \"Violent_crimes_percapita\"}),",
+                "    #\"Added Custom1\" = Table.AddColumn(#\"Removed Columns\", \"Total Crimes Reported\", each [violent_crimes]+[homicides]+[rapes]+[assaults]+[robberies]),",
+                "    #\"Filtered Rows2\" = Table.SelectRows(#\"Added Custom1\", each [months_reported] <> null and [months_reported] <> \"\"),",
+                "    #\"Changed Type2\" = Table.TransformColumnTypes(#\"Filtered Rows2\",{{\"Total Crimes Reported\", Int64.Type}})",
+                "in",
+                "    #\"Changed Type2\""
+              ],
+              "type": "m"
+            }
+          }
+        ]
+      },
+      {
+        "name": "DateTableTemplate_edc65a51-e91c-445a-b659-dd6a78573f0b",
+        "annotations": [
+          {
+            "name": "__PBI_TemplateDateTable",
+            "value": "true"
+          },
+          {
+            "name": "DefaultItem",
+            "value": "DateHierarchy"
+          }
+        ],
+        "columns": [
+          {
+            "name": "Date",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "User"
+              }
+            ],
+            "dataCategory": "PaddedDateTableDates",
+            "dataType": "dateTime",
+            "isDataTypeInferred": true,
+            "isHidden": true,
+            "isNameInferred": true,
+            "lineageTag": "11c737eb-3c4c-4bf6-84dd-ad0f236836e6",
+            "sourceColumn": "[Date]",
+            "summarizeBy": "none",
+            "type": "calculatedTableColumn"
+          },
+          {
+            "name": "Year",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "User"
+              },
+              {
+                "name": "TemplateId",
+                "value": "Year"
+              }
+            ],
+            "dataCategory": "Years",
+            "dataType": "int64",
+            "expression": "YEAR([Date])",
+            "isDataTypeInferred": true,
+            "isHidden": true,
+            "lineageTag": "a850a510-8c8f-460e-99e9-3dac8543f368",
+            "summarizeBy": "none",
+            "type": "calculated"
+          },
+          {
+            "name": "MonthNo",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "User"
+              },
+              {
+                "name": "TemplateId",
+                "value": "MonthNumber"
+              }
+            ],
+            "dataCategory": "MonthOfYear",
+            "dataType": "int64",
+            "expression": "MONTH([Date])",
+            "isDataTypeInferred": true,
+            "isHidden": true,
+            "lineageTag": "e7fa35ac-5aab-4b1b-b13a-47c7589fdb6d",
+            "summarizeBy": "none",
+            "type": "calculated"
+          },
+          {
+            "name": "Month",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "User"
+              },
+              {
+                "name": "TemplateId",
+                "value": "Month"
+              }
+            ],
+            "dataCategory": "Months",
+            "dataType": "string",
+            "expression": "FORMAT([Date], \"MMMM\")",
+            "isDataTypeInferred": true,
+            "isHidden": true,
+            "lineageTag": "21fd3c48-9009-467a-a554-ab1ef000f8de",
+            "sortByColumn": "MonthNo",
+            "summarizeBy": "none",
+            "type": "calculated"
+          },
+          {
+            "name": "QuarterNo",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "User"
+              },
+              {
+                "name": "TemplateId",
+                "value": "QuarterNumber"
+              }
+            ],
+            "dataCategory": "QuarterOfYear",
+            "dataType": "int64",
+            "expression": "INT(([MonthNo] + 2) / 3)",
+            "isDataTypeInferred": true,
+            "isHidden": true,
+            "lineageTag": "9f25d69d-bb1a-402c-9292-d3526b0f3f57",
+            "summarizeBy": "none",
+            "type": "calculated"
+          },
+          {
+            "name": "Quarter",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "User"
+              },
+              {
+                "name": "TemplateId",
+                "value": "Quarter"
+              }
+            ],
+            "dataCategory": "Quarters",
+            "dataType": "string",
+            "expression": "\"Qtr \" & [QuarterNo]",
+            "isDataTypeInferred": true,
+            "isHidden": true,
+            "lineageTag": "19febf18-06e4-4ecf-928d-3e56dc08f02d",
+            "sortByColumn": "QuarterNo",
+            "summarizeBy": "none",
+            "type": "calculated"
+          },
+          {
+            "name": "Day",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "User"
+              },
+              {
+                "name": "TemplateId",
+                "value": "Day"
+              }
+            ],
+            "dataCategory": "DayOfMonth",
+            "dataType": "int64",
+            "expression": "DAY([Date])",
+            "isDataTypeInferred": true,
+            "isHidden": true,
+            "lineageTag": "aa75bde0-2752-4ba7-9590-ee80e6cf6669",
+            "summarizeBy": "none",
+            "type": "calculated"
+          }
+        ],
+        "hierarchies": [
+          {
+            "name": "Date Hierarchy",
+            "annotations": [
+              {
+                "name": "TemplateId",
+                "value": "DateHierarchy"
+              }
+            ],
+            "levels": [
+              {
+                "name": "Year",
+                "column": "Year",
+                "lineageTag": "d80dbdc8-a249-450f-b50e-951f71a2a4eb",
+                "ordinal": 0
+              },
+              {
+                "name": "Quarter",
+                "column": "Quarter",
+                "lineageTag": "087b4484-762a-4d54-9fae-c0c1519042ef",
+                "ordinal": 1
+              },
+              {
+                "name": "Month",
+                "column": "Month",
+                "lineageTag": "c92f1216-fb19-4025-b505-da63bbe94bb9",
+                "ordinal": 2
+              },
+              {
+                "name": "Day",
+                "column": "Day",
+                "lineageTag": "b1a365bd-2ccb-4bf3-b216-a1ba7f2114ec",
+                "ordinal": 3
+              }
+            ],
+            "lineageTag": "aa12ffc3-cdd2-4d6b-be2a-d39467a2b3d0"
+          }
+        ],
+        "isHidden": true,
+        "isPrivate": true,
+        "lineageTag": "4475641c-fd71-4112-ae7a-0a5324a670c1",
+        "partitions": [
+          {
+            "name": "DateTableTemplate_edc65a51-e91c-445a-b659-dd6a78573f0b",
+            "mode": "import",
+            "source": {
+              "expression": "Calendar(Date(2015,1,1), Date(2015,1,1))",
+              "type": "calculated"
+            }
+          }
+        ]
+      },
+      {
+        "name": "LocalDateTable_b5a3da9e-5102-4ca1-92c2-78f8bd271401",
+        "annotations": [
+          {
+            "name": "__PBI_LocalDateTable",
+            "value": "true"
+          }
+        ],
+        "columns": [
+          {
+            "name": "Date",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "User"
+              }
+            ],
+            "dataCategory": "PaddedDateTableDates",
+            "dataType": "dateTime",
+            "isDataTypeInferred": true,
+            "isHidden": true,
+            "isNameInferred": true,
+            "lineageTag": "9c307c7c-03f5-4a3c-a86c-07a0d8735f4f",
+            "sourceColumn": "[Date]",
+            "summarizeBy": "none",
+            "type": "calculatedTableColumn"
+          },
+          {
+            "name": "Year",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "User"
+              },
+              {
+                "name": "TemplateId",
+                "value": "Year"
+              }
+            ],
+            "dataCategory": "Years",
+            "dataType": "int64",
+            "expression": "YEAR([Date])",
+            "isDataTypeInferred": true,
+            "isHidden": true,
+            "lineageTag": "c24dfc5e-e341-4631-be21-f43922a138c7",
+            "summarizeBy": "none",
+            "type": "calculated"
+          },
+          {
+            "name": "MonthNo",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "User"
+              },
+              {
+                "name": "TemplateId",
+                "value": "MonthNumber"
+              }
+            ],
+            "dataCategory": "MonthOfYear",
+            "dataType": "int64",
+            "expression": "MONTH([Date])",
+            "isDataTypeInferred": true,
+            "isHidden": true,
+            "lineageTag": "c2657c29-5724-4709-95d0-0956bf3b5515",
+            "summarizeBy": "none",
+            "type": "calculated"
+          },
+          {
+            "name": "Month",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "User"
+              },
+              {
+                "name": "TemplateId",
+                "value": "Month"
+              }
+            ],
+            "dataCategory": "Months",
+            "dataType": "string",
+            "expression": "FORMAT([Date], \"MMMM\")",
+            "isDataTypeInferred": true,
+            "isHidden": true,
+            "lineageTag": "61d3eb03-d9e5-43aa-aa85-7f749373dc0b",
+            "sortByColumn": "MonthNo",
+            "summarizeBy": "none",
+            "type": "calculated"
+          },
+          {
+            "name": "QuarterNo",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "User"
+              },
+              {
+                "name": "TemplateId",
+                "value": "QuarterNumber"
+              }
+            ],
+            "dataCategory": "QuarterOfYear",
+            "dataType": "int64",
+            "expression": "INT(([MonthNo] + 2) / 3)",
+            "isDataTypeInferred": true,
+            "isHidden": true,
+            "lineageTag": "6fb30879-2646-4ab8-b58d-398d5efcde23",
+            "summarizeBy": "none",
+            "type": "calculated"
+          },
+          {
+            "name": "Quarter",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "User"
+              },
+              {
+                "name": "TemplateId",
+                "value": "Quarter"
+              }
+            ],
+            "dataCategory": "Quarters",
+            "dataType": "string",
+            "expression": "\"Qtr \" & [QuarterNo]",
+            "isDataTypeInferred": true,
+            "isHidden": true,
+            "lineageTag": "a95c6691-809d-426a-8367-f5ca55a0ec9c",
+            "sortByColumn": "QuarterNo",
+            "summarizeBy": "none",
+            "type": "calculated"
+          },
+          {
+            "name": "Day",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "User"
+              },
+              {
+                "name": "TemplateId",
+                "value": "Day"
+              }
+            ],
+            "dataCategory": "DayOfMonth",
+            "dataType": "int64",
+            "expression": "DAY([Date])",
+            "isDataTypeInferred": true,
+            "isHidden": true,
+            "lineageTag": "68c37ebe-fef3-4853-b857-0be3429f044f",
+            "summarizeBy": "none",
+            "type": "calculated"
+          }
+        ],
+        "hierarchies": [
+          {
+            "name": "Date Hierarchy",
+            "annotations": [
+              {
+                "name": "TemplateId",
+                "value": "DateHierarchy"
+              }
+            ],
+            "levels": [
+              {
+                "name": "Year",
+                "column": "Year",
+                "lineageTag": "f7c68afb-dd59-4709-a1dc-c54c967cc96a",
+                "ordinal": 0
+              },
+              {
+                "name": "Quarter",
+                "column": "Quarter",
+                "lineageTag": "bad6e7ea-77c4-4729-94f1-52c91f075906",
+                "ordinal": 1
+              },
+              {
+                "name": "Month",
+                "column": "Month",
+                "lineageTag": "71325ec7-0cb0-4247-88dc-c2f1575c0e95",
+                "ordinal": 2
+              },
+              {
+                "name": "Day",
+                "column": "Day",
+                "lineageTag": "a5949b11-1cdf-4ae8-aef1-1a545fba9928",
+                "ordinal": 3
+              }
+            ],
+            "lineageTag": "abfac7e3-8f57-4a24-ad27-ab7b465baf73"
+          }
+        ],
+        "isHidden": true,
+        "lineageTag": "eff33e72-dd10-45cf-b1d8-d9e91624cf11",
+        "partitions": [
+          {
+            "name": "LocalDateTable_b5a3da9e-5102-4ca1-92c2-78f8bd271401",
+            "mode": "import",
+            "source": {
+              "expression": "Calendar(Date(Year(MIN('us crime dataset'[report_year])), 1, 1), Date(Year(MAX('us crime dataset'[report_year])), 12, 31))",
+              "type": "calculated"
+            }
+          }
+        ],
+        "showAsVariationsOnly": true
+      }
+    ]
+  }
+}

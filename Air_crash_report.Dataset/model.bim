@@ -1,0 +1,723 @@
+{
+  "compatibilityLevel": 1567,
+  "model": {
+    "annotations": [
+      {
+        "name": "PBI_QueryOrder",
+        "value": "[\"Airplane_Crashes_and_Fatalities_Since_1908\"]"
+      },
+      {
+        "name": "__PBI_TimeIntelligenceEnabled",
+        "value": "1"
+      },
+      {
+        "name": "PBIDesktopVersion",
+        "value": "2.124.1052.0 (23.12)"
+      },
+      {
+        "name": "PBI_ProTooling",
+        "value": "[\"DevMode\"]"
+      }
+    ],
+    "culture": "en-US",
+    "cultures": [
+      {
+        "name": "en-US",
+        "linguisticMetadata": {
+          "content": {
+            "DynamicImprovement": "HighConfidence",
+            "Language": "en-US",
+            "Version": "1.0.0"
+          },
+          "contentType": "json"
+        }
+      }
+    ],
+    "dataAccessOptions": {
+      "legacyRedirects": true,
+      "returnErrorValuesAsNull": true
+    },
+    "defaultPowerBIDataSourceVersion": "powerBI_V3",
+    "relationships": [
+      {
+        "name": "afdf6aa9-f77f-4b37-9c7a-b62fbfb85864",
+        "fromColumn": "Date",
+        "fromTable": "Airplane_Crashes_and_Fatalities_Since_1908",
+        "joinOnDateBehavior": "datePartOnly",
+        "toColumn": "Date",
+        "toTable": "LocalDateTable_4c9f91cc-7306-4cf5-946b-a044f36bbbdc"
+      }
+    ],
+    "sourceQueryCulture": "en-IN",
+    "tables": [
+      {
+        "name": "Airplane_Crashes_and_Fatalities_Since_1908",
+        "annotations": [
+          {
+            "name": "PBI_NavigationStepName",
+            "value": "Navigation"
+          },
+          {
+            "name": "PBI_ResultType",
+            "value": "Table"
+          }
+        ],
+        "columns": [
+          {
+            "name": "Location",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "b62a9c91-3f63-4a1a-94e6-b5af83cf7cd5",
+            "sourceColumn": "Location",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Operator",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "51fdb964-bd79-45c0-9999-a79bb57ed0d7",
+            "sourceColumn": "Operator",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Type",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "75169652-c764-490b-9bc7-e04a6ab641ef",
+            "sourceColumn": "Type",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Aboard",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "double",
+            "formatString": "0",
+            "lineageTag": "317df4e7-2a1f-4d02-b420-14c3751fffc8",
+            "sourceColumn": "Aboard",
+            "summarizeBy": "sum"
+          },
+          {
+            "name": "Fatalities",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "double",
+            "formatString": "0",
+            "lineageTag": "d336a5e8-f7c2-4676-b8bc-39e16ba14eaf",
+            "sourceColumn": "Fatalities",
+            "summarizeBy": "sum"
+          },
+          {
+            "name": "Date",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              },
+              {
+                "name": "UnderlyingDateTimeDataType",
+                "value": "Date"
+              }
+            ],
+            "dataType": "dateTime",
+            "formatString": "Long Date",
+            "lineageTag": "69eaf7a2-7e57-48d3-b7e3-a8db76a8f5fd",
+            "sourceColumn": "Date",
+            "summarizeBy": "none",
+            "variations": [
+              {
+                "name": "Variation",
+                "defaultHierarchy": {
+                  "hierarchy": "Date Hierarchy",
+                  "table": "LocalDateTable_4c9f91cc-7306-4cf5-946b-a044f36bbbdc"
+                },
+                "isDefault": true,
+                "relationship": "afdf6aa9-f77f-4b37-9c7a-b62fbfb85864"
+              }
+            ]
+          },
+          {
+            "name": "Type of Plane",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              },
+              {
+                "name": "__PBI_SemanticLinks",
+                "value": "[{\"LinkTarget\":{\"TableName\":\"Airplane_Crashes_and_Fatalities_Since_1908\",\"TableItemName\":\"Type of Plane (groups)\",\"ObjectType\":4},\"LinkType\":\"UsedInGroup\"}]"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "f51c0848-2c7b-41a3-94e3-2a5b230fcbdc",
+            "sourceColumn": "Type of Plane",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Survivors",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              },
+              {
+                "name": "PBI_FormatHint",
+                "value": "{\"isGeneralNumber\":true}"
+              }
+            ],
+            "dataType": "double",
+            "lineageTag": "43adaa3d-cefe-41f3-866f-aa94bfaee6bd",
+            "sourceColumn": "Survivors",
+            "summarizeBy": "sum"
+          },
+          {
+            "name": "Type of Plane (groups)",
+            "annotations": [
+              {
+                "name": "GroupingDesignState",
+                "value": "{\"Version\":0,\"Sources\":[{\"Name\":\"a\",\"Entity\":\"Airplane_Crashes_and_Fatalities_Since_1908\"}],\"GroupedColumns\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"a\"}},\"Property\":\"Type of Plane\"}}],\"GroupItems\":[{\"DisplayName\":\"(Blank)\",\"BlankDefaultPlaceholder\":true},{\"DisplayName\":\"Military\",\"Expression\":{\"In\":{\"Expressions\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"a\"}},\"Property\":\"Type of Plane\"}}],\"Values\":[[{\"Literal\":{\"Value\":\"'Aeroflot / Military'\"}}],[{\"Literal\":{\"Value\":\"'Aeroflot /Military'\"}}],[{\"Literal\":{\"Value\":\"'American Airlines / Military'\"}}],[{\"Literal\":{\"Value\":\"'British European Airways / Military'\"}}],[{\"Literal\":{\"Value\":\"'Capital Airlines / Military'\"}}],[{\"Literal\":{\"Value\":\"'Cubana de Aviacion / Military'\"}}],[{\"Literal\":{\"Value\":\"'Eastern Air Lines / Military'\"}}],[{\"Literal\":{\"Value\":\"'Hughes Airwest  / Military'\"}}],[{\"Literal\":{\"Value\":\"'Iran Air Tours  /  Military'\"}}],[{\"Literal\":{\"Value\":\"'Libya Arab Airlines / Military'\"}}],[{\"Literal\":{\"Value\":\"'Maddux Airlines / Military'\"}}],[{\"Literal\":{\"Value\":\"'Middle East Airlines / Military'\"}}],[{\"Literal\":{\"Value\":\"'Mililtary'\"}}],[{\"Literal\":{\"Value\":\"'Military'\"}}],[{\"Literal\":{\"Value\":\"'Military Soviet  Air Force'\"}}],[{\"Literal\":{\"Value\":\"'Military U.S. Navy'\"}}],[{\"Literal\":{\"Value\":\"'Military U.S. Navy / Military'\"}}],[{\"Literal\":{\"Value\":\"'Miltiary'\"}}],[{\"Literal\":{\"Value\":\"'REAL / Military'\"}}],[{\"Literal\":{\"Value\":\"'United Air Lines / Military'\"}}]]}}},{\"DisplayName\":\"Other\"}]}"
+              },
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "expression": [
+              "SWITCH(",
+              "\tTRUE,",
+              "\tISBLANK('Airplane_Crashes_and_Fatalities_Since_1908'[Type of Plane]),",
+              "\t\"(Blank)\",",
+              "\t'Airplane_Crashes_and_Fatalities_Since_1908'[Type of Plane] IN {\"Aeroflot / Military\",",
+              "\t\t\"Aeroflot /Military\",",
+              "\t\t\"American Airlines / Military\",",
+              "\t\t\"British European Airways / Military\",",
+              "\t\t\"Capital Airlines / Military\",",
+              "\t\t\"Cubana de Aviacion / Military\",",
+              "\t\t\"Eastern Air Lines / Military\",",
+              "\t\t\"Hughes Airwest  / Military\",",
+              "\t\t\"Iran Air Tours  /  Military\",",
+              "\t\t\"Libya Arab Airlines / Military\",",
+              "\t\t\"Maddux Airlines / Military\",",
+              "\t\t\"Middle East Airlines / Military\",",
+              "\t\t\"Mililtary\",",
+              "\t\t\"Military\",",
+              "\t\t\"Military Soviet  Air Force\",",
+              "\t\t\"Military U.S. Navy\",",
+              "\t\t\"Military U.S. Navy / Military\",",
+              "\t\t\"Miltiary\",",
+              "\t\t\"REAL / Military\",",
+              "\t\t\"United Air Lines / Military\"},",
+              "\t\"Military\",",
+              "\t\"Other\"",
+              ")"
+            ],
+            "extendedProperties": [
+              {
+                "name": "GroupingMetadata",
+                "type": "json",
+                "value": {
+                  "groupedColumns": [
+                    {
+                      "Column": {
+                        "Expression": {
+                          "SourceRef": {
+                            "Entity": "Airplane_Crashes_and_Fatalities_Since_1908"
+                          }
+                        },
+                        "Property": "Type of Plane"
+                      }
+                    }
+                  ],
+                  "version": 0
+                }
+              }
+            ],
+            "isDataTypeInferred": true,
+            "lineageTag": "9e62c9fd-e497-4676-9ec7-15da6d2729d5",
+            "summarizeBy": "none",
+            "type": "calculated"
+          }
+        ],
+        "lineageTag": "47e107da-2b90-4804-ac93-6c9ff07d1ec2",
+        "partitions": [
+          {
+            "name": "Airplane_Crashes_and_Fatalities_Since_1908-d059687d-327e-458b-a4cc-80b3ab554c37",
+            "mode": "import",
+            "source": {
+              "expression": [
+                "let",
+                "    Source = Csv.Document(File.Contents(\"E:\\DATA ANALYTICS\\PowerBI\\8_plane crash\\Airplane_Crashes_and_Fatalities_Since_1908.csv\"),[Delimiter=\",\", Columns=13, Encoding=65001, QuoteStyle=QuoteStyle.None]),",
+                "    #\"Promoted Headers\" = Table.PromoteHeaders(Source, [PromoteAllScalars=true]),",
+                "    #\"Changed Type\" = Table.TransformColumnTypes(#\"Promoted Headers\",{{\"Date\", type text}, {\"Time\", type text}, {\"Location\", type text}, {\"Operator\", type text}, {\"Flight #\", type text}, {\"Route\", type text}, {\"Type\", type text}, {\"Registration\", type text}, {\"cn/In\", type text}, {\"Aboard\", Int64.Type}, {\"Fatalities\", Int64.Type}, {\"Ground\", Int64.Type}, {\"Summary\", type text}}),",
+                "    #\"Removed Columns\" = Table.RemoveColumns(#\"Changed Type\",{\"Flight #\", \"Ground\", \"Summary\", \"cn/In\", \"Registration\", \"Route\"}),",
+                "    #\"Replaced Value\" = Table.ReplaceValue(#\"Removed Columns\",\"\",\"Not Identified\",Replacer.ReplaceValue,{\"Operator\"}),",
+                "    #\"Replaced Value1\" = Table.ReplaceValue(#\"Replaced Value\",\"\",\"Not identified\",Replacer.ReplaceValue,{\"Type\"}),",
+                "    #\"Replaced Value2\" = Table.ReplaceValue(#\"Replaced Value1\",\"\",\"NA\",Replacer.ReplaceValue,{\"Time\"}),",
+                "    #\"Replaced Value3\" = Table.ReplaceValue(#\"Replaced Value2\",null,0,Replacer.ReplaceValue,{\"Aboard\"}),",
+                "    #\"Replaced Value4\" = Table.ReplaceValue(#\"Replaced Value3\",null,0,Replacer.ReplaceValue,{\"Fatalities\"}),",
+                "    #\"Split Column by Delimiter\" = Table.SplitColumn(#\"Replaced Value4\", \"Date\", Splitter.SplitTextByDelimiter(\"/\", QuoteStyle.None), {\"Date.1\", \"Date.2\", \"Date.3\"}),",
+                "    #\"Changed Type1\" = Table.TransformColumnTypes(#\"Split Column by Delimiter\",{{\"Date.1\", Int64.Type}, {\"Date.2\", Int64.Type}, {\"Date.3\", Int64.Type}}),",
+                "    #\"Merged Columns\" = Table.CombineColumns(Table.TransformColumnTypes(#\"Changed Type1\", {{\"Date.2\", type text}, {\"Date.1\", type text}}, \"en-IN\"),{\"Date.2\", \"Date.1\"},Combiner.CombineTextByDelimiter(\"/\", QuoteStyle.None),\"Merged\"),",
+                "    #\"Merged Columns1\" = Table.CombineColumns(Table.TransformColumnTypes(#\"Merged Columns\", {{\"Date.3\", type text}}, \"en-IN\"),{\"Merged\", \"Date.3\"},Combiner.CombineTextByDelimiter(\"/\", QuoteStyle.None),\"Merged.1\"),",
+                "    #\"Changed Type2\" = Table.TransformColumnTypes(#\"Merged Columns1\",{{\"Merged.1\", type date}}),",
+                "    #\"Renamed Columns\" = Table.RenameColumns(#\"Changed Type2\",{{\"Merged.1\", \"Date\"}}),",
+                "    #\"Removed Columns1\" = Table.RemoveColumns(#\"Renamed Columns\",{\"Time\"}),",
+                "    #\"Inserted Text Before Delimiter\" = Table.AddColumn(#\"Removed Columns1\", \"Text Before Delimiter\", each Text.BeforeDelimiter([Operator], \"-\"), type text),",
+                "    #\"Renamed Columns1\" = Table.RenameColumns(#\"Inserted Text Before Delimiter\",{{\"Text Before Delimiter\", \"Type of Plane\"}}),",
+                "    #\"Inserted Subtraction\" = Table.AddColumn(#\"Renamed Columns1\", \"Subtraction\", each [Aboard] - [Fatalities], type number),",
+                "    #\"Renamed Columns2\" = Table.RenameColumns(#\"Inserted Subtraction\",{{\"Subtraction\", \"Survivors\"}})",
+                "in",
+                "    #\"Renamed Columns2\""
+              ],
+              "type": "m"
+            }
+          }
+        ]
+      },
+      {
+        "name": "DateTableTemplate_b6714de0-6f41-4337-a970-37fbe8c9683f",
+        "annotations": [
+          {
+            "name": "__PBI_TemplateDateTable",
+            "value": "true"
+          },
+          {
+            "name": "DefaultItem",
+            "value": "DateHierarchy"
+          }
+        ],
+        "columns": [
+          {
+            "name": "Date",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "User"
+              }
+            ],
+            "dataCategory": "PaddedDateTableDates",
+            "dataType": "dateTime",
+            "isDataTypeInferred": true,
+            "isHidden": true,
+            "isNameInferred": true,
+            "lineageTag": "e756b0ae-97f6-4ade-929a-ac791c3703bb",
+            "sourceColumn": "[Date]",
+            "summarizeBy": "none",
+            "type": "calculatedTableColumn"
+          },
+          {
+            "name": "Year",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "User"
+              },
+              {
+                "name": "TemplateId",
+                "value": "Year"
+              }
+            ],
+            "dataCategory": "Years",
+            "dataType": "int64",
+            "expression": "YEAR([Date])",
+            "isDataTypeInferred": true,
+            "isHidden": true,
+            "lineageTag": "bc7f1a95-dbf4-4957-acf3-d3b79c85af0a",
+            "summarizeBy": "none",
+            "type": "calculated"
+          },
+          {
+            "name": "MonthNo",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "User"
+              },
+              {
+                "name": "TemplateId",
+                "value": "MonthNumber"
+              }
+            ],
+            "dataCategory": "MonthOfYear",
+            "dataType": "int64",
+            "expression": "MONTH([Date])",
+            "isDataTypeInferred": true,
+            "isHidden": true,
+            "lineageTag": "eae8e561-8749-4644-ad32-d88f81d5eddb",
+            "summarizeBy": "none",
+            "type": "calculated"
+          },
+          {
+            "name": "Month",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "User"
+              },
+              {
+                "name": "TemplateId",
+                "value": "Month"
+              }
+            ],
+            "dataCategory": "Months",
+            "dataType": "string",
+            "expression": "FORMAT([Date], \"MMMM\")",
+            "isDataTypeInferred": true,
+            "isHidden": true,
+            "lineageTag": "a98b8d8f-6b04-475a-83c2-d937a1b23a8c",
+            "sortByColumn": "MonthNo",
+            "summarizeBy": "none",
+            "type": "calculated"
+          },
+          {
+            "name": "QuarterNo",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "User"
+              },
+              {
+                "name": "TemplateId",
+                "value": "QuarterNumber"
+              }
+            ],
+            "dataCategory": "QuarterOfYear",
+            "dataType": "int64",
+            "expression": "INT(([MonthNo] + 2) / 3)",
+            "isDataTypeInferred": true,
+            "isHidden": true,
+            "lineageTag": "9698c97e-ab90-4806-8592-09075e97e438",
+            "summarizeBy": "none",
+            "type": "calculated"
+          },
+          {
+            "name": "Quarter",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "User"
+              },
+              {
+                "name": "TemplateId",
+                "value": "Quarter"
+              }
+            ],
+            "dataCategory": "Quarters",
+            "dataType": "string",
+            "expression": "\"Qtr \" & [QuarterNo]",
+            "isDataTypeInferred": true,
+            "isHidden": true,
+            "lineageTag": "98579774-011b-478b-9667-c41b119a9d55",
+            "sortByColumn": "QuarterNo",
+            "summarizeBy": "none",
+            "type": "calculated"
+          },
+          {
+            "name": "Day",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "User"
+              },
+              {
+                "name": "TemplateId",
+                "value": "Day"
+              }
+            ],
+            "dataCategory": "DayOfMonth",
+            "dataType": "int64",
+            "expression": "DAY([Date])",
+            "isDataTypeInferred": true,
+            "isHidden": true,
+            "lineageTag": "1d7b0327-a4b4-4717-b6ea-788e99057f31",
+            "summarizeBy": "none",
+            "type": "calculated"
+          }
+        ],
+        "hierarchies": [
+          {
+            "name": "Date Hierarchy",
+            "annotations": [
+              {
+                "name": "TemplateId",
+                "value": "DateHierarchy"
+              }
+            ],
+            "levels": [
+              {
+                "name": "Year",
+                "column": "Year",
+                "lineageTag": "163a0417-4841-4309-a28b-6b63f83dc4a4",
+                "ordinal": 0
+              },
+              {
+                "name": "Quarter",
+                "column": "Quarter",
+                "lineageTag": "35767b99-51eb-4e0e-85d7-ada0cd76df5c",
+                "ordinal": 1
+              },
+              {
+                "name": "Month",
+                "column": "Month",
+                "lineageTag": "55b02e90-1113-4510-81fb-05bf064443e6",
+                "ordinal": 2
+              },
+              {
+                "name": "Day",
+                "column": "Day",
+                "lineageTag": "db0b7030-a3b1-4082-bd1f-bf491a7b3a66",
+                "ordinal": 3
+              }
+            ],
+            "lineageTag": "3d4d319d-1fe5-4d05-89c0-0a2cd8c482cb"
+          }
+        ],
+        "isHidden": true,
+        "isPrivate": true,
+        "lineageTag": "39de9373-2dde-4020-8b2b-da14e81182ed",
+        "partitions": [
+          {
+            "name": "DateTableTemplate_b6714de0-6f41-4337-a970-37fbe8c9683f-c0c16ace-7fd5-4bd7-b216-b48b4cd06987",
+            "mode": "import",
+            "source": {
+              "expression": "Calendar(Date(2015,1,1), Date(2015,1,1))",
+              "type": "calculated"
+            }
+          }
+        ]
+      },
+      {
+        "name": "LocalDateTable_4c9f91cc-7306-4cf5-946b-a044f36bbbdc",
+        "annotations": [
+          {
+            "name": "__PBI_LocalDateTable",
+            "value": "true"
+          }
+        ],
+        "columns": [
+          {
+            "name": "Date",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "User"
+              }
+            ],
+            "dataCategory": "PaddedDateTableDates",
+            "dataType": "dateTime",
+            "isDataTypeInferred": true,
+            "isHidden": true,
+            "isNameInferred": true,
+            "lineageTag": "6e64bbeb-cc45-44eb-9632-71697dcd93bf",
+            "sourceColumn": "[Date]",
+            "summarizeBy": "none",
+            "type": "calculatedTableColumn"
+          },
+          {
+            "name": "Year",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "User"
+              },
+              {
+                "name": "TemplateId",
+                "value": "Year"
+              }
+            ],
+            "dataCategory": "Years",
+            "dataType": "int64",
+            "expression": "YEAR([Date])",
+            "isDataTypeInferred": true,
+            "isHidden": true,
+            "lineageTag": "1ee0f60e-2284-4079-bc9c-7392a314f5bb",
+            "summarizeBy": "none",
+            "type": "calculated"
+          },
+          {
+            "name": "MonthNo",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "User"
+              },
+              {
+                "name": "TemplateId",
+                "value": "MonthNumber"
+              }
+            ],
+            "dataCategory": "MonthOfYear",
+            "dataType": "int64",
+            "expression": "MONTH([Date])",
+            "isDataTypeInferred": true,
+            "isHidden": true,
+            "lineageTag": "a58cb016-e741-4123-b186-935be9d297f1",
+            "summarizeBy": "none",
+            "type": "calculated"
+          },
+          {
+            "name": "Month",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "User"
+              },
+              {
+                "name": "TemplateId",
+                "value": "Month"
+              }
+            ],
+            "dataCategory": "Months",
+            "dataType": "string",
+            "expression": "FORMAT([Date], \"MMMM\")",
+            "isDataTypeInferred": true,
+            "isHidden": true,
+            "lineageTag": "31a4dc50-701f-4418-9709-5906c36f71c1",
+            "sortByColumn": "MonthNo",
+            "summarizeBy": "none",
+            "type": "calculated"
+          },
+          {
+            "name": "QuarterNo",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "User"
+              },
+              {
+                "name": "TemplateId",
+                "value": "QuarterNumber"
+              }
+            ],
+            "dataCategory": "QuarterOfYear",
+            "dataType": "int64",
+            "expression": "INT(([MonthNo] + 2) / 3)",
+            "isDataTypeInferred": true,
+            "isHidden": true,
+            "lineageTag": "da4b45f4-0706-4b90-870d-7769ef162d68",
+            "summarizeBy": "none",
+            "type": "calculated"
+          },
+          {
+            "name": "Quarter",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "User"
+              },
+              {
+                "name": "TemplateId",
+                "value": "Quarter"
+              }
+            ],
+            "dataCategory": "Quarters",
+            "dataType": "string",
+            "expression": "\"Qtr \" & [QuarterNo]",
+            "isDataTypeInferred": true,
+            "isHidden": true,
+            "lineageTag": "7cae0d56-6336-4586-8f0f-09f5d0a66d14",
+            "sortByColumn": "QuarterNo",
+            "summarizeBy": "none",
+            "type": "calculated"
+          },
+          {
+            "name": "Day",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "User"
+              },
+              {
+                "name": "TemplateId",
+                "value": "Day"
+              }
+            ],
+            "dataCategory": "DayOfMonth",
+            "dataType": "int64",
+            "expression": "DAY([Date])",
+            "isDataTypeInferred": true,
+            "isHidden": true,
+            "lineageTag": "fd434362-4b98-470a-8321-242d6c5f8653",
+            "summarizeBy": "none",
+            "type": "calculated"
+          }
+        ],
+        "hierarchies": [
+          {
+            "name": "Date Hierarchy",
+            "annotations": [
+              {
+                "name": "TemplateId",
+                "value": "DateHierarchy"
+              }
+            ],
+            "levels": [
+              {
+                "name": "Year",
+                "column": "Year",
+                "lineageTag": "9283d650-551c-48c5-beab-eef8c1ee7d98",
+                "ordinal": 0
+              },
+              {
+                "name": "Quarter",
+                "column": "Quarter",
+                "lineageTag": "5eefa0f8-1eec-4f96-a993-c445bcf0e304",
+                "ordinal": 1
+              },
+              {
+                "name": "Month",
+                "column": "Month",
+                "lineageTag": "ddc3f12b-95d2-46ce-83d4-3ae843b507d7",
+                "ordinal": 2
+              },
+              {
+                "name": "Day",
+                "column": "Day",
+                "lineageTag": "1a0b4cbb-fe1b-466c-87c3-fc14ec04442e",
+                "ordinal": 3
+              }
+            ],
+            "lineageTag": "1ecd3182-77a5-4c76-abc7-cedfe30fdca4"
+          }
+        ],
+        "isHidden": true,
+        "lineageTag": "5ef20228-0bcd-4cfc-8fee-986d9e1c4809",
+        "partitions": [
+          {
+            "name": "LocalDateTable_4c9f91cc-7306-4cf5-946b-a044f36bbbdc-43949db8-97ed-4152-b295-d9d9d4fb25e0",
+            "mode": "import",
+            "source": {
+              "expression": "Calendar(Date(Year(MIN('Airplane_Crashes_and_Fatalities_Since_1908'[Date])), 1, 1), Date(Year(MAX('Airplane_Crashes_and_Fatalities_Since_1908'[Date])), 12, 31))",
+              "type": "calculated"
+            }
+          }
+        ],
+        "showAsVariationsOnly": true
+      }
+    ]
+  }
+}

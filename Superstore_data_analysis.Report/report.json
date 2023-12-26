@@ -1,0 +1,189 @@
+{
+  "config": "{\"version\":\"5.44\",\"themeCollection\":{\"baseTheme\":{\"name\":\"CY23SU04\",\"version\":\"5.46\",\"type\":2}},\"activeSectionIndex\":1,\"defaultDrillFilterOtherVisuals\":true,\"linguisticSchemaSyncVersion\":2,\"settings\":{\"useNewFilterPaneExperience\":true,\"allowChangeFilterTypes\":true,\"useStylableVisualContainerHeader\":true,\"queryLimitOption\":6,\"useEnhancedTooltips\":true,\"exportDataMode\":1,\"useDefaultAggregateDisplayName\":true},\"objects\":{\"section\":[{\"properties\":{\"verticalAlignment\":{\"expr\":{\"Literal\":{\"Value\":\"'Top'\"}}}}}],\"outspacePane\":[{\"properties\":{\"expanded\":{\"expr\":{\"Literal\":{\"Value\":\"false\"}}}}}]}}",
+  "layoutOptimization": 0,
+  "resourcePackages": [
+    {
+      "resourcePackage": {
+        "disabled": false,
+        "items": [
+          {
+            "name": "CY23SU04",
+            "path": "BaseThemes/CY23SU04.json",
+            "type": 202
+          }
+        ],
+        "name": "SharedResources",
+        "type": 2
+      }
+    }
+  ],
+  "sections": [
+    {
+      "config": "{}",
+      "displayName": "Dashboard",
+      "displayOption": 1,
+      "filters": "[]",
+      "height": 720.00,
+      "name": "ReportSection",
+      "visualContainers": [
+        {
+          "config": "{\"name\":\"048c67c632751ce1f095\",\"layouts\":[{\"id\":0,\"position\":{\"x\":0,\"y\":360,\"z\":1000,\"width\":482.8571428571429,\"height\":360,\"tabOrder\":1000}}],\"singleVisual\":{\"visualType\":\"ribbonChart\",\"projections\":{\"Y\":[{\"queryRef\":\"Sum(Superstore xls - Orders.Sales)\"}],\"Category\":[{\"queryRef\":\"Superstore xls - Orders.Order_Date.Variation.Date Hierarchy.Year\",\"active\":true}],\"Series\":[{\"queryRef\":\"Superstore xls - Orders.Region\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"s\",\"Entity\":\"Superstore xls - Orders\",\"Type\":0}],\"Select\":[{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"s\"}},\"Property\":\"Sales\"}},\"Function\":0},\"Name\":\"Sum(Superstore xls - Orders.Sales)\",\"NativeReferenceName\":\"Sum of Sales\"},{\"HierarchyLevel\":{\"Expression\":{\"Hierarchy\":{\"Expression\":{\"PropertyVariationSource\":{\"Expression\":{\"SourceRef\":{\"Source\":\"s\"}},\"Name\":\"Variation\",\"Property\":\"Order_Date\"}},\"Hierarchy\":\"Date Hierarchy\"}},\"Level\":\"Year\"},\"Name\":\"Superstore xls - Orders.Order_Date.Variation.Date Hierarchy.Year\",\"NativeReferenceName\":\"Order_Date Year\"},{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"s\"}},\"Property\":\"Region\"},\"Name\":\"Superstore xls - Orders.Region\",\"NativeReferenceName\":\"Region\"}],\"OrderBy\":[{\"Direction\":1,\"Expression\":{\"HierarchyLevel\":{\"Expression\":{\"Hierarchy\":{\"Expression\":{\"PropertyVariationSource\":{\"Expression\":{\"SourceRef\":{\"Source\":\"s\"}},\"Name\":\"Variation\",\"Property\":\"Order_Date\"}},\"Hierarchy\":\"Date Hierarchy\"}},\"Level\":\"Year\"}}}]},\"drillFilterOtherVisuals\":true,\"hasDefaultSort\":true,\"vcObjects\":{\"title\":[{\"properties\":{\"titleWrap\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}},\"fontColor\":{\"solid\":{\"color\":{\"expr\":{\"ThemeDataColor\":{\"ColorId\":1,\"Percent\":0}}}}},\"background\":{\"solid\":{\"color\":{\"expr\":{\"ThemeDataColor\":{\"ColorId\":2,\"Percent\":0.6}}}}},\"alignment\":{\"expr\":{\"Literal\":{\"Value\":\"'center'\"}}},\"fontSize\":{\"expr\":{\"Literal\":{\"Value\":\"16D\"}}}}}],\"background\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}},\"transparency\":{\"expr\":{\"Literal\":{\"Value\":\"0D\"}}}}}],\"border\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}},\"radius\":{\"expr\":{\"Literal\":{\"Value\":\"30D\"}}}}}]}}}",
+          "filters": "[]",
+          "height": 360.00,
+          "width": 482.86,
+          "x": 0.00,
+          "y": 360.00,
+          "z": 1000.00
+        },
+        {
+          "config": "{\"name\":\"57df0ba0abb0103d2342\",\"layouts\":[{\"id\":0,\"position\":{\"x\":0,\"y\":0,\"z\":7000,\"width\":1270,\"height\":80,\"tabOrder\":7000}}],\"singleVisual\":{\"visualType\":\"textbox\",\"drillFilterOtherVisuals\":true,\"objects\":{\"general\":[{\"properties\":{\"paragraphs\":[{\"textRuns\":[{\"value\":\"SuperStore Data Analysis\",\"textStyle\":{\"fontWeight\":\"bold\",\"fontSize\":\"36pt\",\"color\":\"#118dff\"}}],\"horizontalTextAlignment\":\"center\"}]}}]},\"vcObjects\":{\"border\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}},\"radius\":{\"expr\":{\"Literal\":{\"Value\":\"30D\"}}}}}]}}}",
+          "filters": "[]",
+          "height": 80.00,
+          "width": 1270.00,
+          "x": 0.00,
+          "y": 0.00,
+          "z": 7000.00
+        },
+        {
+          "config": "{\"name\":\"66bb895a51775c42147d\",\"layouts\":[{\"id\":0,\"position\":{\"x\":881.6666666666667,\"y\":210,\"z\":5000,\"width\":398.33333333333337,\"height\":150,\"tabOrder\":5000}}],\"singleVisual\":{\"visualType\":\"card\",\"projections\":{\"Values\":[{\"queryRef\":\"Min(Superstore xls - Orders.Category)\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"s\",\"Entity\":\"Superstore xls - Orders\",\"Type\":0}],\"Select\":[{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"s\"}},\"Property\":\"Category\"}},\"Function\":3},\"Name\":\"Min(Superstore xls - Orders.Category)\",\"NativeReferenceName\":\" Category With Max . Profit\"}]},\"columnProperties\":{\"Min(Superstore xls - Orders.Category)\":{\"displayName\":\" Category With Max . Profit\"}},\"drillFilterOtherVisuals\":true,\"objects\":{\"labels\":[{\"properties\":{\"color\":{\"solid\":{\"color\":{\"expr\":{\"ThemeDataColor\":{\"ColorId\":2,\"Percent\":0}}}}},\"fontSize\":{\"expr\":{\"Literal\":{\"Value\":\"40D\"}}}}}],\"categoryLabels\":[{\"properties\":{\"fontSize\":{\"expr\":{\"Literal\":{\"Value\":\"13D\"}}}}}]},\"vcObjects\":{\"title\":[{\"properties\":{\"titleWrap\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}}}}],\"background\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}},\"transparency\":{\"expr\":{\"Literal\":{\"Value\":\"0D\"}}}}}],\"border\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}},\"radius\":{\"expr\":{\"Literal\":{\"Value\":\"30D\"}}}}}]}}}",
+          "filters": "[{\"name\":\"Filter28707201b9cfcf371495\",\"expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Entity\":\"Superstore xls - Orders\"}},\"Property\":\"Category\"}},\"filter\":{\"Version\":2,\"From\":[{\"Name\":\"subquery\",\"Expression\":{\"Subquery\":{\"Query\":{\"Version\":2,\"From\":[{\"Name\":\"s\",\"Entity\":\"Superstore xls - Orders\",\"Type\":0}],\"Select\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"s\"}},\"Property\":\"Category\"},\"Name\":\"field\"}],\"OrderBy\":[{\"Direction\":2,\"Expression\":{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"s\"}},\"Property\":\"Profit\"}},\"Function\":4}}}],\"Top\":1}}},\"Type\":2},{\"Name\":\"s\",\"Entity\":\"Superstore xls - Orders\",\"Type\":0}],\"Where\":[{\"Condition\":{\"In\":{\"Expressions\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"s\"}},\"Property\":\"Category\"}}],\"Table\":{\"SourceRef\":{\"Source\":\"subquery\"}}}}}]},\"type\":\"TopN\",\"howCreated\":1}]",
+          "height": 150.00,
+          "width": 398.33,
+          "x": 881.67,
+          "y": 210.00,
+          "z": 5000.00
+        },
+        {
+          "config": "{\"name\":\"6d55269425219f3d1ad3\",\"layouts\":[{\"id\":0,\"position\":{\"x\":1060,\"y\":80,\"z\":6000,\"width\":220,\"height\":131.66666666666669,\"tabOrder\":6000}}],\"singleVisual\":{\"visualType\":\"card\",\"projections\":{\"Values\":[{\"queryRef\":\"Min(Superstore xls - Orders.Region)\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"s\",\"Entity\":\"Superstore xls - Orders\",\"Type\":0}],\"Select\":[{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"s\"}},\"Property\":\"Region\"}},\"Function\":3},\"Name\":\"Min(Superstore xls - Orders.Region)\",\"NativeReferenceName\":\"Region With Max. Profit\"}]},\"columnProperties\":{\"Min(Superstore xls - Orders.Region)\":{\"displayName\":\"Region With Max. Profit\"}},\"drillFilterOtherVisuals\":true,\"objects\":{\"categoryLabels\":[{\"properties\":{\"fontSize\":{\"expr\":{\"Literal\":{\"Value\":\"13D\"}}}}}],\"labels\":[{\"properties\":{\"fontSize\":{\"expr\":{\"Literal\":{\"Value\":\"40D\"}}},\"color\":{\"solid\":{\"color\":{\"expr\":{\"ThemeDataColor\":{\"ColorId\":2,\"Percent\":0}}}}}}}]},\"vcObjects\":{\"border\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}},\"radius\":{\"expr\":{\"Literal\":{\"Value\":\"30D\"}}}}}]}}}",
+          "filters": "[{\"name\":\"Filter6d26f60d2fc6da7cebb9\",\"expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Entity\":\"Superstore xls - Orders\"}},\"Property\":\"Region\"}},\"filter\":{\"Version\":2,\"From\":[{\"Name\":\"subquery\",\"Expression\":{\"Subquery\":{\"Query\":{\"Version\":2,\"From\":[{\"Name\":\"s\",\"Entity\":\"Superstore xls - Orders\",\"Type\":0}],\"Select\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"s\"}},\"Property\":\"Region\"},\"Name\":\"field\"}],\"OrderBy\":[{\"Direction\":2,\"Expression\":{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"s\"}},\"Property\":\"Profit\"}},\"Function\":4}}}],\"Top\":1}}},\"Type\":2},{\"Name\":\"s\",\"Entity\":\"Superstore xls - Orders\",\"Type\":0}],\"Where\":[{\"Condition\":{\"In\":{\"Expressions\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"s\"}},\"Property\":\"Region\"}}],\"Table\":{\"SourceRef\":{\"Source\":\"subquery\"}}}}}]},\"type\":\"TopN\",\"howCreated\":1}]",
+          "height": 131.67,
+          "width": 220.00,
+          "x": 1060.00,
+          "y": 80.00,
+          "z": 6000.00
+        },
+        {
+          "config": "{\"name\":\"7f9affb99e8727ebc0b3\",\"layouts\":[{\"id\":0,\"position\":{\"x\":0,\"y\":80,\"z\":0,\"width\":483.33333333333337,\"height\":286.6666666666667,\"tabOrder\":0}}],\"singleVisual\":{\"visualType\":\"donutChart\",\"projections\":{\"Y\":[{\"queryRef\":\"Sum(Superstore xls - Orders.Sales)\"}],\"Category\":[{\"queryRef\":\"Superstore xls - Orders.Region\",\"active\":true}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"s\",\"Entity\":\"Superstore xls - Orders\",\"Type\":0}],\"Select\":[{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"s\"}},\"Property\":\"Sales\"}},\"Function\":0},\"Name\":\"Sum(Superstore xls - Orders.Sales)\",\"NativeReferenceName\":\"Sum of Sales\"},{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"s\"}},\"Property\":\"Region\"},\"Name\":\"Superstore xls - Orders.Region\",\"NativeReferenceName\":\"Region\"}],\"OrderBy\":[{\"Direction\":2,\"Expression\":{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"s\"}},\"Property\":\"Sales\"}},\"Function\":0}}}]},\"drillFilterOtherVisuals\":true,\"hasDefaultSort\":true,\"vcObjects\":{\"border\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}},\"radius\":{\"expr\":{\"Literal\":{\"Value\":\"30D\"}}}}}],\"title\":[{\"properties\":{\"text\":{\"expr\":{\"Literal\":{\"Value\":\"' Sales by Region'\"}}},\"alignment\":{\"expr\":{\"Literal\":{\"Value\":\"'center'\"}}},\"fontColor\":{\"solid\":{\"color\":{\"expr\":{\"ThemeDataColor\":{\"ColorId\":1,\"Percent\":0}}}}},\"background\":{\"solid\":{\"color\":{\"expr\":{\"ThemeDataColor\":{\"ColorId\":2,\"Percent\":0.6}}}}},\"fontSize\":{\"expr\":{\"Literal\":{\"Value\":\"16D\"}}}}}]}}}",
+          "filters": "[]",
+          "height": 286.67,
+          "width": 483.33,
+          "x": 0.00,
+          "y": 80.00,
+          "z": 0.00
+        },
+        {
+          "config": "{\"name\":\"86d6e6cd155b069f0020\",\"layouts\":[{\"id\":0,\"position\":{\"x\":481.6666666666667,\"y\":80,\"z\":2000,\"width\":400,\"height\":280,\"tabOrder\":2000}}],\"singleVisual\":{\"visualType\":\"lineChart\",\"projections\":{\"Category\":[{\"queryRef\":\"Superstore xls - Orders.Order_Date.Variation.Date Hierarchy.Year\",\"active\":true}],\"Y\":[{\"queryRef\":\"Sum(Superstore xls - Orders.Sales)\"}],\"Series\":[{\"queryRef\":\"Superstore xls - Orders.Category\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"s\",\"Entity\":\"Superstore xls - Orders\",\"Type\":0}],\"Select\":[{\"HierarchyLevel\":{\"Expression\":{\"Hierarchy\":{\"Expression\":{\"PropertyVariationSource\":{\"Expression\":{\"SourceRef\":{\"Source\":\"s\"}},\"Name\":\"Variation\",\"Property\":\"Order_Date\"}},\"Hierarchy\":\"Date Hierarchy\"}},\"Level\":\"Year\"},\"Name\":\"Superstore xls - Orders.Order_Date.Variation.Date Hierarchy.Year\",\"NativeReferenceName\":\"Order_Date Year\"},{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"s\"}},\"Property\":\"Sales\"}},\"Function\":0},\"Name\":\"Sum(Superstore xls - Orders.Sales)\",\"NativeReferenceName\":\"Sum of Sales\"},{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"s\"}},\"Property\":\"Category\"},\"Name\":\"Superstore xls - Orders.Category\",\"NativeReferenceName\":\"Category\"}],\"OrderBy\":[{\"Direction\":1,\"Expression\":{\"HierarchyLevel\":{\"Expression\":{\"Hierarchy\":{\"Expression\":{\"PropertyVariationSource\":{\"Expression\":{\"SourceRef\":{\"Source\":\"s\"}},\"Name\":\"Variation\",\"Property\":\"Order_Date\"}},\"Hierarchy\":\"Date Hierarchy\"}},\"Level\":\"Year\"}}}]},\"drillFilterOtherVisuals\":true,\"hasDefaultSort\":true,\"vcObjects\":{\"title\":[{\"properties\":{\"titleWrap\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}},\"fontColor\":{\"solid\":{\"color\":{\"expr\":{\"ThemeDataColor\":{\"ColorId\":1,\"Percent\":0}}}}},\"background\":{\"solid\":{\"color\":{\"expr\":{\"ThemeDataColor\":{\"ColorId\":2,\"Percent\":0.6}}}}},\"alignment\":{\"expr\":{\"Literal\":{\"Value\":\"'center'\"}}},\"fontSize\":{\"expr\":{\"Literal\":{\"Value\":\"16D\"}}}}}],\"background\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}},\"transparency\":{\"expr\":{\"Literal\":{\"Value\":\"0D\"}}}}}],\"border\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}},\"radius\":{\"expr\":{\"Literal\":{\"Value\":\"30D\"}}}}}]}}}",
+          "filters": "[]",
+          "height": 280.00,
+          "width": 400.00,
+          "x": 481.67,
+          "y": 80.00,
+          "z": 2000.00
+        },
+        {
+          "config": "{\"name\":\"89d1c8cdd6e31711de1c\",\"layouts\":[{\"id\":0,\"position\":{\"x\":881.6666666666667,\"y\":80,\"z\":4000,\"width\":178.33333333333334,\"height\":130,\"tabOrder\":4000}}],\"singleVisual\":{\"visualType\":\"card\",\"projections\":{\"Values\":[{\"queryRef\":\"Sum(Superstore xls - Orders.Profit)\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"s\",\"Entity\":\"Superstore xls - Orders\",\"Type\":0}],\"Select\":[{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"s\"}},\"Property\":\"Profit\"}},\"Function\":4},\"Name\":\"Sum(Superstore xls - Orders.Profit)\",\"NativeReferenceName\":\"Max of Profit\"}],\"OrderBy\":[{\"Direction\":2,\"Expression\":{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"s\"}},\"Property\":\"Profit\"}},\"Function\":4}}}]},\"drillFilterOtherVisuals\":true,\"hasDefaultSort\":true,\"objects\":{\"labels\":[{\"properties\":{\"color\":{\"solid\":{\"color\":{\"expr\":{\"ThemeDataColor\":{\"ColorId\":2,\"Percent\":0}}}}},\"fontSize\":{\"expr\":{\"Literal\":{\"Value\":\"40D\"}}}}}],\"categoryLabels\":[{\"properties\":{\"fontSize\":{\"expr\":{\"Literal\":{\"Value\":\"13D\"}}}}}]},\"vcObjects\":{\"title\":[{\"properties\":{\"titleWrap\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}}}}],\"background\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}},\"transparency\":{\"expr\":{\"Literal\":{\"Value\":\"0D\"}}}}}],\"border\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}},\"radius\":{\"expr\":{\"Literal\":{\"Value\":\"30D\"}}}}}]}}}",
+          "filters": "[]",
+          "height": 130.00,
+          "width": 178.33,
+          "x": 881.67,
+          "y": 80.00,
+          "z": 4000.00
+        },
+        {
+          "config": "{\"name\":\"b5272a2fce89d0973406\",\"layouts\":[{\"id\":0,\"position\":{\"x\":482.8571428571429,\"y\":360,\"z\":3000,\"width\":797.1428571428572,\"height\":360,\"tabOrder\":3000}}],\"singleVisual\":{\"visualType\":\"scatterChart\",\"projections\":{\"Category\":[{\"queryRef\":\"Superstore xls - Orders.Sub-Category\",\"active\":true}],\"X\":[{\"queryRef\":\"Sum(Superstore xls - Orders.Sales)\",\"active\":true}],\"Y\":[{\"queryRef\":\"Sum(Superstore xls - Orders.Profit)\"}],\"Series\":[{\"queryRef\":\"Superstore xls - Orders.Category\"}],\"Size\":[{\"queryRef\":\"Sum(Superstore xls - Orders.Quantity)\"}],\"Play\":[{\"queryRef\":\"Superstore xls - Orders.Order_Date.Variation.Date Hierarchy.Year\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"s\",\"Entity\":\"Superstore xls - Orders\",\"Type\":0}],\"Select\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"s\"}},\"Property\":\"Sub-Category\"},\"Name\":\"Superstore xls - Orders.Sub-Category\",\"NativeReferenceName\":\"Sub-Category\"},{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"s\"}},\"Property\":\"Sales\"}},\"Function\":0},\"Name\":\"Sum(Superstore xls - Orders.Sales)\",\"NativeReferenceName\":\"Sum of Sales\"},{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"s\"}},\"Property\":\"Profit\"}},\"Function\":0},\"Name\":\"Sum(Superstore xls - Orders.Profit)\",\"NativeReferenceName\":\"Sum of Profit\"},{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"s\"}},\"Property\":\"Category\"},\"Name\":\"Superstore xls - Orders.Category\",\"NativeReferenceName\":\"Category\"},{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"s\"}},\"Property\":\"Quantity\"}},\"Function\":0},\"Name\":\"Sum(Superstore xls - Orders.Quantity)\",\"NativeReferenceName\":\"Sum of Quantity\"},{\"HierarchyLevel\":{\"Expression\":{\"Hierarchy\":{\"Expression\":{\"PropertyVariationSource\":{\"Expression\":{\"SourceRef\":{\"Source\":\"s\"}},\"Name\":\"Variation\",\"Property\":\"Order_Date\"}},\"Hierarchy\":\"Date Hierarchy\"}},\"Level\":\"Year\"},\"Name\":\"Superstore xls - Orders.Order_Date.Variation.Date Hierarchy.Year\",\"NativeReferenceName\":\"Order_Date Year\"}]},\"drillFilterOtherVisuals\":true,\"vcObjects\":{\"title\":[{\"properties\":{\"titleWrap\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}},\"fontColor\":{\"solid\":{\"color\":{\"expr\":{\"ThemeDataColor\":{\"ColorId\":1,\"Percent\":0}}}}},\"background\":{\"solid\":{\"color\":{\"expr\":{\"ThemeDataColor\":{\"ColorId\":2,\"Percent\":0.6}}}}},\"alignment\":{\"expr\":{\"Literal\":{\"Value\":\"'center'\"}}},\"fontSize\":{\"expr\":{\"Literal\":{\"Value\":\"16D\"}}},\"text\":{\"expr\":{\"Literal\":{\"Value\":\"' Sales,  Profit and Quantity by Sub-Category, Category and Year'\"}}}}}],\"background\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}},\"transparency\":{\"expr\":{\"Literal\":{\"Value\":\"0D\"}}}}}],\"border\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}},\"radius\":{\"expr\":{\"Literal\":{\"Value\":\"30D\"}}}}}]}}}",
+          "filters": "[]",
+          "height": 360.00,
+          "width": 797.14,
+          "x": 482.86,
+          "y": 360.00,
+          "z": 3000.00
+        }
+      ],
+      "width": 1280.00
+    },
+    {
+      "config": "{}",
+      "displayName": "Sum of sale by categorys",
+      "displayOption": 1,
+      "filters": "[]",
+      "height": 720.00,
+      "name": "ReportSection58bd53b20dbe2cac1623",
+      "ordinal": 2,
+      "visualContainers": [
+        {
+          "config": "{\"name\":\"e219763100cb90e6b637\",\"layouts\":[{\"id\":0,\"position\":{\"x\":0,\"y\":0,\"z\":0,\"width\":1280.54143433955,\"height\":719.8123437800423,\"tabOrder\":0}}],\"singleVisual\":{\"visualType\":\"ribbonChart\",\"projections\":{\"Y\":[{\"queryRef\":\"Sum(Superstore xls - Orders.Sales)\"}],\"Category\":[{\"queryRef\":\"Superstore xls - Orders.Order_Date.Variation.Date Hierarchy.Year\",\"active\":true}],\"Series\":[{\"queryRef\":\"Superstore xls - Orders.Region\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"s\",\"Entity\":\"Superstore xls - Orders\",\"Type\":0}],\"Select\":[{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"s\"}},\"Property\":\"Sales\"}},\"Function\":0},\"Name\":\"Sum(Superstore xls - Orders.Sales)\",\"NativeReferenceName\":\"Sum of Sales\"},{\"HierarchyLevel\":{\"Expression\":{\"Hierarchy\":{\"Expression\":{\"PropertyVariationSource\":{\"Expression\":{\"SourceRef\":{\"Source\":\"s\"}},\"Name\":\"Variation\",\"Property\":\"Order_Date\"}},\"Hierarchy\":\"Date Hierarchy\"}},\"Level\":\"Year\"},\"Name\":\"Superstore xls - Orders.Order_Date.Variation.Date Hierarchy.Year\",\"NativeReferenceName\":\"Order_Date Year\"},{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"s\"}},\"Property\":\"Region\"},\"Name\":\"Superstore xls - Orders.Region\",\"NativeReferenceName\":\"Region\"}],\"OrderBy\":[{\"Direction\":1,\"Expression\":{\"HierarchyLevel\":{\"Expression\":{\"Hierarchy\":{\"Expression\":{\"PropertyVariationSource\":{\"Expression\":{\"SourceRef\":{\"Source\":\"s\"}},\"Name\":\"Variation\",\"Property\":\"Order_Date\"}},\"Hierarchy\":\"Date Hierarchy\"}},\"Level\":\"Year\"}}}]},\"drillFilterOtherVisuals\":true,\"hasDefaultSort\":true,\"vcObjects\":{\"title\":[{\"properties\":{\"titleWrap\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}},\"fontColor\":{\"solid\":{\"color\":{\"expr\":{\"ThemeDataColor\":{\"ColorId\":1,\"Percent\":0}}}}},\"background\":{\"solid\":{\"color\":{\"expr\":{\"ThemeDataColor\":{\"ColorId\":2,\"Percent\":0.6}}}}},\"alignment\":{\"expr\":{\"Literal\":{\"Value\":\"'center'\"}}},\"fontSize\":{\"expr\":{\"Literal\":{\"Value\":\"16D\"}}}}}],\"background\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}},\"transparency\":{\"expr\":{\"Literal\":{\"Value\":\"0D\"}}}}}],\"border\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}},\"radius\":{\"expr\":{\"Literal\":{\"Value\":\"30D\"}}}}}]}}}",
+          "filters": "[]",
+          "height": 719.81,
+          "width": 1280.54,
+          "x": 0.00,
+          "y": 0.00,
+          "z": 0.00
+        }
+      ],
+      "width": 1280.00
+    },
+    {
+      "config": "{}",
+      "displayName": "Sales and profit by years",
+      "displayOption": 1,
+      "filters": "[]",
+      "height": 720.00,
+      "name": "ReportSection841afa90ac727345a0e3",
+      "ordinal": 3,
+      "visualContainers": [
+        {
+          "config": "{\"name\":\"b4ac27638e204e841ed0\",\"layouts\":[{\"id\":0,\"position\":{\"x\":0,\"y\":0,\"z\":0,\"width\":1280.54143433955,\"height\":719.8123437800423,\"tabOrder\":0}}],\"singleVisual\":{\"visualType\":\"scatterChart\",\"projections\":{\"Category\":[{\"queryRef\":\"Superstore xls - Orders.Sub-Category\",\"active\":true}],\"X\":[{\"queryRef\":\"Sum(Superstore xls - Orders.Sales)\",\"active\":true}],\"Y\":[{\"queryRef\":\"Sum(Superstore xls - Orders.Profit)\"}],\"Series\":[{\"queryRef\":\"Superstore xls - Orders.Category\"}],\"Size\":[{\"queryRef\":\"Sum(Superstore xls - Orders.Quantity)\"}],\"Play\":[{\"queryRef\":\"Superstore xls - Orders.Order_Date.Variation.Date Hierarchy.Year\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"s\",\"Entity\":\"Superstore xls - Orders\",\"Type\":0}],\"Select\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"s\"}},\"Property\":\"Sub-Category\"},\"Name\":\"Superstore xls - Orders.Sub-Category\",\"NativeReferenceName\":\"Sub-Category\"},{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"s\"}},\"Property\":\"Sales\"}},\"Function\":0},\"Name\":\"Sum(Superstore xls - Orders.Sales)\",\"NativeReferenceName\":\"Sum of Sales\"},{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"s\"}},\"Property\":\"Profit\"}},\"Function\":0},\"Name\":\"Sum(Superstore xls - Orders.Profit)\",\"NativeReferenceName\":\"Sum of Profit\"},{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"s\"}},\"Property\":\"Category\"},\"Name\":\"Superstore xls - Orders.Category\",\"NativeReferenceName\":\"Category\"},{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"s\"}},\"Property\":\"Quantity\"}},\"Function\":0},\"Name\":\"Sum(Superstore xls - Orders.Quantity)\",\"NativeReferenceName\":\"Sum of Quantity\"},{\"HierarchyLevel\":{\"Expression\":{\"Hierarchy\":{\"Expression\":{\"PropertyVariationSource\":{\"Expression\":{\"SourceRef\":{\"Source\":\"s\"}},\"Name\":\"Variation\",\"Property\":\"Order_Date\"}},\"Hierarchy\":\"Date Hierarchy\"}},\"Level\":\"Year\"},\"Name\":\"Superstore xls - Orders.Order_Date.Variation.Date Hierarchy.Year\",\"NativeReferenceName\":\"Order_Date Year\"}]},\"drillFilterOtherVisuals\":true,\"vcObjects\":{\"title\":[{\"properties\":{\"titleWrap\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}},\"fontColor\":{\"solid\":{\"color\":{\"expr\":{\"ThemeDataColor\":{\"ColorId\":1,\"Percent\":0}}}}},\"background\":{\"solid\":{\"color\":{\"expr\":{\"ThemeDataColor\":{\"ColorId\":2,\"Percent\":0.6}}}}},\"alignment\":{\"expr\":{\"Literal\":{\"Value\":\"'center'\"}}},\"fontSize\":{\"expr\":{\"Literal\":{\"Value\":\"16D\"}}},\"text\":{\"expr\":{\"Literal\":{\"Value\":\"' Sales,  Profit and Quantity by Sub-Category, Category and Year'\"}}}}}],\"background\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}},\"transparency\":{\"expr\":{\"Literal\":{\"Value\":\"0D\"}}}}}],\"border\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}},\"radius\":{\"expr\":{\"Literal\":{\"Value\":\"30D\"}}}}}]}}}",
+          "filters": "[]",
+          "height": 719.81,
+          "width": 1280.54,
+          "x": 0.00,
+          "y": 0.00,
+          "z": 0.00
+        }
+      ],
+      "width": 1280.00
+    },
+    {
+      "config": "{}",
+      "displayName": "Sum of sales by year and category ",
+      "displayOption": 1,
+      "filters": "[]",
+      "height": 720.00,
+      "name": "ReportSectiona3acf8f265892e83100a",
+      "ordinal": 4,
+      "visualContainers": [
+        {
+          "config": "{\"name\":\"be4090806c7cb004e8a9\",\"layouts\":[{\"id\":0,\"position\":{\"x\":0,\"y\":0,\"z\":0,\"width\":1280.54143433955,\"height\":719.8123437800423,\"tabOrder\":0}}],\"singleVisual\":{\"visualType\":\"lineChart\",\"projections\":{\"Category\":[{\"queryRef\":\"Superstore xls - Orders.Order_Date.Variation.Date Hierarchy.Year\",\"active\":true}],\"Y\":[{\"queryRef\":\"Sum(Superstore xls - Orders.Sales)\"}],\"Series\":[{\"queryRef\":\"Superstore xls - Orders.Category\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"s\",\"Entity\":\"Superstore xls - Orders\",\"Type\":0}],\"Select\":[{\"HierarchyLevel\":{\"Expression\":{\"Hierarchy\":{\"Expression\":{\"PropertyVariationSource\":{\"Expression\":{\"SourceRef\":{\"Source\":\"s\"}},\"Name\":\"Variation\",\"Property\":\"Order_Date\"}},\"Hierarchy\":\"Date Hierarchy\"}},\"Level\":\"Year\"},\"Name\":\"Superstore xls - Orders.Order_Date.Variation.Date Hierarchy.Year\",\"NativeReferenceName\":\"Order_Date Year\"},{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"s\"}},\"Property\":\"Sales\"}},\"Function\":0},\"Name\":\"Sum(Superstore xls - Orders.Sales)\",\"NativeReferenceName\":\"Sum of Sales\"},{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"s\"}},\"Property\":\"Category\"},\"Name\":\"Superstore xls - Orders.Category\",\"NativeReferenceName\":\"Category\"}],\"OrderBy\":[{\"Direction\":1,\"Expression\":{\"HierarchyLevel\":{\"Expression\":{\"Hierarchy\":{\"Expression\":{\"PropertyVariationSource\":{\"Expression\":{\"SourceRef\":{\"Source\":\"s\"}},\"Name\":\"Variation\",\"Property\":\"Order_Date\"}},\"Hierarchy\":\"Date Hierarchy\"}},\"Level\":\"Year\"}}}]},\"drillFilterOtherVisuals\":true,\"hasDefaultSort\":true,\"vcObjects\":{\"title\":[{\"properties\":{\"titleWrap\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}},\"fontColor\":{\"solid\":{\"color\":{\"expr\":{\"ThemeDataColor\":{\"ColorId\":1,\"Percent\":0}}}}},\"background\":{\"solid\":{\"color\":{\"expr\":{\"ThemeDataColor\":{\"ColorId\":2,\"Percent\":0.6}}}}},\"alignment\":{\"expr\":{\"Literal\":{\"Value\":\"'center'\"}}},\"fontSize\":{\"expr\":{\"Literal\":{\"Value\":\"16D\"}}}}}],\"background\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}},\"transparency\":{\"expr\":{\"Literal\":{\"Value\":\"0D\"}}}}}],\"border\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}},\"radius\":{\"expr\":{\"Literal\":{\"Value\":\"30D\"}}}}}]}}}",
+          "filters": "[]",
+          "height": 719.81,
+          "width": 1280.54,
+          "x": 0.00,
+          "y": 0.00,
+          "z": 0.00
+        }
+      ],
+      "width": 1280.00
+    },
+    {
+      "config": "{}",
+      "displayName": "Sales by region",
+      "displayOption": 1,
+      "filters": "[]",
+      "height": 720.00,
+      "name": "ReportSectionae7114990b83aa3e9481",
+      "ordinal": 1,
+      "visualContainers": [
+        {
+          "config": "{\"name\":\"da4f9efe600d056e070e\",\"layouts\":[{\"id\":0,\"position\":{\"x\":0,\"y\":80.32916746779466,\"z\":0,\"width\":1280.54143433955,\"height\":639.4831763122477,\"tabOrder\":0}}],\"singleVisual\":{\"visualType\":\"donutChart\",\"projections\":{\"Y\":[{\"queryRef\":\"Sum(Superstore xls - Orders.Sales)\"}],\"Category\":[{\"queryRef\":\"Superstore xls - Orders.Region\",\"active\":true}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"s\",\"Entity\":\"Superstore xls - Orders\",\"Type\":0}],\"Select\":[{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"s\"}},\"Property\":\"Sales\"}},\"Function\":0},\"Name\":\"Sum(Superstore xls - Orders.Sales)\",\"NativeReferenceName\":\"Sum of Sales\"},{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"s\"}},\"Property\":\"Region\"},\"Name\":\"Superstore xls - Orders.Region\",\"NativeReferenceName\":\"Region\"}],\"OrderBy\":[{\"Direction\":2,\"Expression\":{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"s\"}},\"Property\":\"Sales\"}},\"Function\":0}}}]},\"drillFilterOtherVisuals\":true,\"hasDefaultSort\":true,\"vcObjects\":{\"border\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}},\"radius\":{\"expr\":{\"Literal\":{\"Value\":\"30D\"}}}}}],\"title\":[{\"properties\":{\"text\":{\"expr\":{\"Literal\":{\"Value\":\"' Sales by Region'\"}}},\"alignment\":{\"expr\":{\"Literal\":{\"Value\":\"'center'\"}}},\"fontColor\":{\"solid\":{\"color\":{\"expr\":{\"ThemeDataColor\":{\"ColorId\":1,\"Percent\":0}}}}},\"background\":{\"solid\":{\"color\":{\"expr\":{\"ThemeDataColor\":{\"ColorId\":2,\"Percent\":0.6}}}}},\"fontSize\":{\"expr\":{\"Literal\":{\"Value\":\"16D\"}}}}}]}}}",
+          "filters": "[]",
+          "height": 639.48,
+          "width": 1280.54,
+          "x": 0.00,
+          "y": 80.33,
+          "z": 0.00
+        }
+      ],
+      "width": 1280.00
+    }
+  ]
+}
